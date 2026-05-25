@@ -6,29 +6,33 @@ root: intro
 chapters:
 - file: getting_started
   title: Getting Started
-- file: account
-  title: Account
-- file: metadata
+- file: integrations
+  title: Connected Portals
+- file: fair_data
   sections:
   - file: metadata_guidance
     title: Metadata Guidance
-- file: fair_data
+  - file: data_formatting
+    title: Data Formatting
+    sections:
+    - file: ssfc_tutorial
+      title: Tabular Data
+    - file: netcdf_tutorial
+      title: NetCDF Data
+    - file: darwin_core
+      title: Darwin Core
+- file: community_data_principles
+  title: Community Data Principles
+  sections:
+  - file: principles
+    title: Principles
+  - file: data_archiving
+    title: Data Archiving
+- file: tools
 - file: api
+  title: Technical
   sections:
   - file: sitemap
   - file: schemaorg
   - file: csw
   - file: qsearch
-- file: integrations
-- file: tutorial
-  sections:
-  - file: metadata_tutorial
-    sections:
-    - file: create_metadata
-    - file: edit_metadata
-    - file: publish_metadata
-  - file: link_data
-    title: Link Data
-  - file: qgis
-  - file: python
-- file: tools

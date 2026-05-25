@@ -1,0 +1,903 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="./" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Tabular Data &#8212; Antarctic Metadata Catalogue</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="_static/styles/theme.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+<link href="_static/styles/bootstrap.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+
+  
+  <link href="_static/vendor/fontawesome/6.5.1/css/all.min.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.1/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.1/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.1/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=fa44fd50" />
+    <link rel="stylesheet" type="text/css" href="_static/styles/sphinx-book-theme.css?v=384b581d" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css?v=0a3b3ea7" />
+    <link rel="stylesheet" type="text/css" href="_static/custom.css?v=325fe235" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae" />
+  <script src="_static/vendor/fontawesome/6.5.1/js/all.min.js?digest=8d27b9dea8ad943066ae"></script>
+
+    <script src="_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="_static/doctools.js?v=888ff710"></script>
+    <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="_static/copybutton.js?v=f281be69"></script>
+    <script src="_static/scripts/sphinx-book-theme.js?v=efea14e4"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="_static/togglebutton.js?v=4a39c7ea"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="_static/design-tabs.js?v=36754332"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'ssfc_tutorial';</script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="NetCDF Data" href="netcdf_tutorial.html" />
+    <link rel="prev" title="Data Formatting" href="data_formatting.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <a id="pst-skip-link" class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>
+    Back to top
+  </button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+
+<a class="navbar-brand logo" href="intro.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="_static/logo.png" class="logo__image only-light" alt="Antarctic Metadata Catalogue - Home"/>
+    <script>document.write(`<img src="_static/logo.png" class="logo__image only-dark" alt="Antarctic Metadata Catalogue - Home"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn navbar-btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="intro.html">
+                    Antarctic Metadata Catalogue
+                </a>
+            </li>
+        </ul>
+        <ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="getting_started.html">Getting Started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="integrations.html">Connected Portals</a></li>
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="fair_data.html">FAIR Data</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="metadata_guidance.html">Metadata Guidance</a></li>
+<li class="toctree-l2 current active has-children"><a class="reference internal" href="data_formatting.html">Data Formatting</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
+<li class="toctree-l3 current active"><a class="current reference internal" href="#">Tabular Data</a></li>
+<li class="toctree-l3"><a class="reference internal" href="netcdf_tutorial.html">NetCDF Data</a></li>
+<li class="toctree-l3"><a class="reference internal" href="darwin_core.html">Darwin Core</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="community_data_principles.html">Community Data Principles</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="principles.html">Principles</a></li>
+<li class="toctree-l2"><a class="reference internal" href="data_archiving.html">Data Archiving</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="tools.html">Tools</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="api.html">Technical</a><input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-4"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="sitemap.html">Site Map</a></li>
+<li class="toctree-l2"><a class="reference internal" href="schemaorg.html">Schema.org</a></li>
+<li class="toctree-l2"><a class="reference internal" href="csw.html">Catalogue Service for the Web</a></li>
+<li class="toctree-l2"><a class="reference internal" href="qsearch.html">Search</a></li>
+</ul>
+</li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="_sources/ssfc_tutorial.md" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.md</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Tabular Data</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-1-transform-raw-lab-data">Step 1: Transform Raw Lab Data</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-2-read-and-reshape">Step 2: Read and Reshape</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-3-create-sample-ids">Step 3: Create Sample IDs</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-4-add-spatial-and-temporal-metadata">Step 4: Add Spatial and Temporal Metadata</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-5-standardise-naming-and-data-types">Step 5: Standardise Naming and Data Types</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-6-export">Step 6: Export</a></li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="tabular-data">
+<h1>Tabular Data<a class="headerlink" href="#tabular-data" title="Link to this heading">#</a></h1>
+<p>This tutorial processes contaminant concentrations measured in Antarctic marine tissue samples from the Scott Base area. The raw data arrives as a wide-format lab export — contaminants as rows, samples as columns — and is reshaped into three tidy, FAIR-ready CSVs: one per contaminant class.</p>
+<p><strong>Donwload raw lab file</strong><br>
+<a class="reference download internal" download="" href="_downloads/fa9d301d67e554e6175c87ec789dd71f/raw_lab_chemical_data_example.csv"><code class="xref download docutils literal notranslate"><span class="pre">raw_lab_chemical_data_example.csv</span></code></a><br></p>
+<p><strong>Donwload transformed raw lab file</strong><br>
+<a class="reference download internal" download="" href="_downloads/07685a77da131e2c237935a6ae78f6e4/transformed_chemical_data_example.csv"><code class="xref download docutils literal notranslate"><span class="pre">transformed_chemical_data_example.csv</span></code></a></p>
+<p><strong>Download curated files</strong><br>
+<a class="reference download internal" download="" href="_downloads/c867450f097e61b754fdfa3795552f9f/trace_metals_in_biomatter.csv"><code class="xref download docutils literal notranslate"><span class="pre">trace_metals_in_biomatter.csv</span></code></a><br>
+<a class="reference download internal" download="" href="_downloads/b8cc15c8da31ddaa135802dd6e489676/polycyclic_aromatic_hydrocarbons_in_biomatter.csv"><code class="xref download docutils literal notranslate"><span class="pre">polycyclic_aromatic_hydrocarbons_in_biomatter.csv</span></code></a><br>
+<a class="reference download internal" download="" href="_downloads/e34f8f0e922347984ef1328b0f8a3f52/polychlorinated_biphenyls_in_biomatter.csv"><code class="xref download docutils literal notranslate"><span class="pre">polychlorinated_biphenyls_in_biomatter.csv</span></code></a></p>
+<br>
+<p><strong>Script</strong></p>
+<div class="sd-tab-set docutils">
+<input checked="checked" id="sd-tab-item-0" name="sd-tab-set-0" type="radio">
+</input><label class="sd-tab-label" data-sync-id="r" for="sd-tab-item-0">
+R</label><div class="sd-tab-content docutils">
+<p><a class="reference download internal" download="" href="_downloads/6864f935b3021c5da0cc55487b5b7f59/format_chemical_data.R"><code class="xref download docutils literal notranslate"><span class="pre">format_chemical_data.R</span></code></a></p>
+</div>
+<input id="sd-tab-item-1" name="sd-tab-set-0" type="radio">
+</input><label class="sd-tab-label" data-sync-id="python" for="sd-tab-item-1">
+Python</label><div class="sd-tab-content docutils">
+<p><a class="reference download internal" download="" href="_downloads/c567fe0fe9894f975665c2e99292e82c/format_chemical_data.py"><code class="xref download docutils literal notranslate"><span class="pre">format_chemical_data.py</span></code></a></p>
+</div>
+</div>
+<br>
+<p><strong>Dependencies:</strong></p>
+<div class="sd-tab-set docutils">
+<input checked="checked" id="sd-tab-item-2" name="sd-tab-set-1" type="radio">
+</input><label class="sd-tab-label" data-sync-id="r" for="sd-tab-item-2">
+R</label><div class="sd-tab-content docutils">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="nf">library</span><span class="p">(</span><span class="n">tidyverse</span><span class="p">)</span><span class="w">   </span><span class="c1"># dplyr, tidyr, stringr, purrr</span>
+</pre></div>
+</div>
+</div>
+<input id="sd-tab-item-3" name="sd-tab-set-1" type="radio">
+</input><label class="sd-tab-label" data-sync-id="python" for="sd-tab-item-3">
+Python</label><div class="sd-tab-content docutils">
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="kn">import</span> <span class="nn">re</span>
+<span class="kn">from</span> <span class="nn">datetime</span> <span class="kn">import</span> <span class="n">datetime</span><span class="p">,</span> <span class="n">timezone</span>
+</pre></div>
+</div>
+</div>
+</div>
+<hr class="docutils" />
+<section id="step-1-transform-raw-lab-data">
+<h2>Step 1: Transform Raw Lab Data<a class="headerlink" href="#step-1-transform-raw-lab-data" title="Link to this heading">#</a></h2>
+<p>The raw laboratory CSV (<code class="docutils literal notranslate"><span class="pre">raw_lab_chemical_data_example.csv</span></code>) uses a <strong>wide format</strong> with metadata in the header: each row is a contaminant and each column (after the first three) is a sample. Sample column names encode the expedition, station-replicate, tissue species, and sample ID, separated by <code class="docutils literal notranslate"><span class="pre">--</span></code>. Before running the script, this file is manually reshaped into a <strong>tidy format</strong> (<code class="docutils literal notranslate"><span class="pre">transformed_chemical_data_example.csv</span></code>) where each sample is a row.</p>
+<img alt="_images/input_chemical_1.png" class="align-center" src="_images/input_chemical_1.png" />
+<br>
+<p style="text-align: center; color: #555; margin: 0.25em 0;">⬇ &nbsp; manually reshaped to tidy format &nbsp; ⬇</p>
+<br>
+<img alt="_images/input_chemical_2.png" class="align-center" src="_images/input_chemical_2.png" />
+</section>
+<hr class="docutils" />
+<section id="step-2-read-and-reshape">
+<h2>Step 2: Read and Reshape<a class="headerlink" href="#step-2-read-and-reshape" title="Link to this heading">#</a></h2>
+<p>The data is transposed from wide format into <strong>tidy format/long format</strong>: each row becomes one measurement (one contaminant in one sample). Contaminant names then become column headers, and samples become rows. Finally the data is split into three separate DataFrames — one per contaminant class.</p>
+<p><strong>After reshape</strong> — each row is now a sample, each contaminant is a column (trace metals subset shown):</p>
+<table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p>type</p></th>
+<th class="head"><p>unit</p></th>
+<th class="head"><p>name</p></th>
+<th class="head text-center"><p>Arsenic</p></th>
+<th class="head text-center"><p>Cadmium</p></th>
+<th class="head text-center"><p>Copper</p></th>
+<th class="head text-center"><p>Lead</p></th>
+<th class="head text-center"><p>Mercury</p></th>
+<th class="head text-center"><p>Zinc</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>trace metals</p></td>
+<td><p>mg/kg as rcvd</p></td>
+<td><p>ANZ21201–SB2-1–Sphaerotylus–…</p></td>
+<td class="text-center"><p>1.48</p></td>
+<td class="text-center"><p>7.30</p></td>
+<td class="text-center"><p>4.0</p></td>
+<td class="text-center"><p>1.28</p></td>
+<td class="text-center"><p>0.044</p></td>
+<td class="text-center"><p>12.2</p></td>
+</tr>
+<tr class="row-odd"><td><p>trace metals</p></td>
+<td><p>mg/kg as rcvd</p></td>
+<td><p>ANZ21201–SB2-2–Sphaerotylus–…</p></td>
+<td class="text-center"><p>1.27</p></td>
+<td class="text-center"><p>5.90</p></td>
+<td class="text-center"><p>3.1</p></td>
+<td class="text-center"><p>1.66</p></td>
+<td class="text-center"><p>0.039</p></td>
+<td class="text-center"><p>9.8</p></td>
+</tr>
+<tr class="row-even"><td><p>trace metals</p></td>
+<td><p>mg/kg as rcvd</p></td>
+<td><p>ANZ21201–SB2-1–Laternula–…</p></td>
+<td class="text-center"><p>5.70</p></td>
+<td class="text-center"><p>6.30</p></td>
+<td class="text-center"><p>35.0</p></td>
+<td class="text-center"><p>0.65</p></td>
+<td class="text-center"><p>0.059</p></td>
+<td class="text-center"><p>32.0</p></td>
+</tr>
+</tbody>
+</table>
+<div class="sd-tab-set docutils">
+<input checked="checked" id="sd-tab-item-4" name="sd-tab-set-2" type="radio">
+</input><label class="sd-tab-label" data-sync-id="r" for="sd-tab-item-4">
+R</label><div class="sd-tab-content docutils">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="n">ds_tissue</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">read.csv</span><span class="p">(</span><span class="s">&quot;transformed_chemical_data_example.csv&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">check.names</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">FALSE</span><span class="p">)</span><span class="w"> </span><span class="o">%&gt;%</span>
+<span class="w">  </span><span class="c1"># Wide → long: each row is one contaminant × one sample</span>
+<span class="w">  </span><span class="nf">pivot_longer</span><span class="p">(</span><span class="n">.</span><span class="p">,</span><span class="w"> </span><span class="o">-</span><span class="nf">c</span><span class="p">(</span><span class="s">&quot;species&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;type&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;unit&quot;</span><span class="p">))</span><span class="w"> </span><span class="o">%&gt;%</span>
+<span class="w">  </span><span class="c1"># Long → wide: contaminants become columns, samples become rows</span>
+<span class="w">  </span><span class="nf">pivot_wider</span><span class="p">(</span><span class="n">.</span><span class="p">,</span><span class="w"> </span><span class="n">names_from</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;species&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">values_from</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;value&quot;</span><span class="p">)</span><span class="w"> </span><span class="o">%&gt;%</span>
+<span class="w">  </span><span class="c1"># Split into a named list by contaminant class</span>
+<span class="w">  </span><span class="nf">split</span><span class="p">(</span><span class="n">.</span><span class="p">,</span><span class="w"> </span><span class="nf">factor</span><span class="p">(</span><span class="n">.</span><span class="o">$</span><span class="n">type</span><span class="p">,</span><span class="w"> </span><span class="n">levels</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">unique</span><span class="p">(</span><span class="n">.</span><span class="o">$</span><span class="n">type</span><span class="p">)))</span><span class="w"> </span><span class="o">%&gt;%</span>
+<span class="w">  </span><span class="c1"># Drop columns that are entirely NA within each class</span>
+<span class="w">  </span><span class="nf">map</span><span class="p">(</span><span class="o">~</span><span class="w"> </span><span class="nf">select</span><span class="p">(</span><span class="n">.x</span><span class="p">,</span><span class="w"> </span><span class="nf">where</span><span class="p">(</span><span class="o">~</span><span class="w"> </span><span class="o">!</span><span class="nf">all</span><span class="p">(</span><span class="nf">is.na</span><span class="p">(</span><span class="n">.</span><span class="p">)))))</span>
+</pre></div>
+</div>
+</div>
+<input id="sd-tab-item-5" name="sd-tab-set-2" type="radio">
+</input><label class="sd-tab-label" data-sync-id="python" for="sd-tab-item-5">
+Python</label><div class="sd-tab-content docutils">
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s2">&quot;transformed_chemical_data_example.csv&quot;</span><span class="p">)</span>
+
+<span class="c1"># Wide → long (pivot_longer equivalent)</span>
+<span class="n">df_long</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">melt</span><span class="p">(</span>
+    <span class="n">id_vars</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;species&quot;</span><span class="p">,</span> <span class="s2">&quot;type&quot;</span><span class="p">,</span> <span class="s2">&quot;unit&quot;</span><span class="p">],</span>
+    <span class="n">var_name</span><span class="o">=</span><span class="s2">&quot;name&quot;</span><span class="p">,</span>
+    <span class="n">value_name</span><span class="o">=</span><span class="s2">&quot;value&quot;</span>
+<span class="p">)</span>
+
+<span class="c1"># Long → wide: contaminants (species) become columns, samples become rows</span>
+<span class="n">df_wide</span> <span class="o">=</span> <span class="p">(</span>
+    <span class="n">df_long</span>
+    <span class="o">.</span><span class="n">pivot_table</span><span class="p">(</span>
+        <span class="n">index</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;type&quot;</span><span class="p">,</span> <span class="s2">&quot;unit&quot;</span><span class="p">,</span> <span class="s2">&quot;name&quot;</span><span class="p">],</span>
+        <span class="n">columns</span><span class="o">=</span><span class="s2">&quot;species&quot;</span><span class="p">,</span>
+        <span class="n">values</span><span class="o">=</span><span class="s2">&quot;value&quot;</span><span class="p">,</span>
+        <span class="n">aggfunc</span><span class="o">=</span><span class="s2">&quot;first&quot;</span>
+    <span class="p">)</span>
+    <span class="o">.</span><span class="n">reset_index</span><span class="p">()</span>
+<span class="p">)</span>
+<span class="n">df_wide</span><span class="o">.</span><span class="n">columns</span><span class="o">.</span><span class="n">name</span> <span class="o">=</span> <span class="kc">None</span>
+
+<span class="c1"># Split by contaminant class; drop all-NA columns within each group</span>
+<span class="n">groups</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="n">t</span><span class="p">:</span> <span class="n">df_wide</span><span class="p">[</span><span class="n">df_wide</span><span class="p">[</span><span class="s2">&quot;type&quot;</span><span class="p">]</span> <span class="o">==</span> <span class="n">t</span><span class="p">]</span><span class="o">.</span><span class="n">dropna</span><span class="p">(</span><span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">how</span><span class="o">=</span><span class="s2">&quot;all&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
+    <span class="k">for</span> <span class="n">t</span> <span class="ow">in</span> <span class="n">df_wide</span><span class="p">[</span><span class="s2">&quot;type&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">unique</span><span class="p">()</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<hr class="docutils" />
+<section id="step-3-create-sample-ids">
+<h2>Step 3: Create Sample IDs<a class="headerlink" href="#step-3-create-sample-ids" title="Link to this heading">#</a></h2>
+<p>The sample column name encodes four fields joined by <code class="docutils literal notranslate"><span class="pre">--</span></code>:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">ANZ21201</span> <span class="o">--</span> <span class="n">SB2</span><span class="o">-</span><span class="mi">1</span> <span class="o">--</span> <span class="n">Sphaerotylus</span> <span class="o">--</span> <span class="mf">3194448.1</span>
+<span class="n">expedition</span>   <span class="n">station</span><span class="o">-</span><span class="n">rep</span>  <span class="n">tissue</span> <span class="n">species</span>   <span class="n">sample</span> <span class="n">ID</span>
+</pre></div>
+</div>
+<p>A concise <code class="docutils literal notranslate"><span class="pre">id</span></code> column is built from the station-replicate and tissue species, and the original verbose name is dropped. The sample name is decoded into a readable id and measurement columns carry units:</p>
+<table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p>id</p></th>
+<th class="head text-center"><p>Arsenic [mg/kg]</p></th>
+<th class="head text-center"><p>Cadmium [mg/kg]</p></th>
+<th class="head text-center"><p>Copper [mg/kg]</p></th>
+<th class="head text-center"><p>…</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>SB2-1-Sphaerotylus</p></td>
+<td class="text-center"><p>1.48</p></td>
+<td class="text-center"><p>7.30</p></td>
+<td class="text-center"><p>4.0</p></td>
+<td class="text-center"><p>…</p></td>
+</tr>
+<tr class="row-odd"><td><p>SB2-2-Sphaerotylus</p></td>
+<td class="text-center"><p>1.27</p></td>
+<td class="text-center"><p>5.90</p></td>
+<td class="text-center"><p>3.1</p></td>
+<td class="text-center"><p>…</p></td>
+</tr>
+<tr class="row-even"><td><p>SB2-1-Laternula</p></td>
+<td class="text-center"><p>5.70</p></td>
+<td class="text-center"><p>6.30</p></td>
+<td class="text-center"><p>35.0</p></td>
+<td class="text-center"><p>…</p></td>
+</tr>
+</tbody>
+</table>
+<div class="sd-tab-set docutils">
+<input checked="checked" id="sd-tab-item-6" name="sd-tab-set-3" type="radio">
+</input><label class="sd-tab-label" data-sync-id="r" for="sd-tab-item-6">
+R</label><div class="sd-tab-content docutils">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="n">ds_tissue</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">ds_tissue</span><span class="w"> </span><span class="o">%&gt;%</span>
+<span class="w">  </span><span class="nf">map</span><span class="p">(</span><span class="o">~</span><span class="w"> </span><span class="n">.x</span><span class="w"> </span><span class="o">%&gt;%</span>
+<span class="w">        </span><span class="nf">rowwise</span><span class="p">()</span><span class="w"> </span><span class="o">%&gt;%</span>
+<span class="w">        </span><span class="nf">mutate</span><span class="p">(</span>
+<span class="w">          </span><span class="n">id</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">paste0</span><span class="p">(</span>
+<span class="w">            </span><span class="nf">str_split</span><span class="p">(</span><span class="n">name</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;--&quot;</span><span class="p">)[[</span><span class="m">1</span><span class="p">]][</span><span class="m">2</span><span class="p">],</span><span class="w">  </span><span class="c1"># station-rep  e.g. &quot;SB2-1&quot;</span>
+<span class="w">            </span><span class="s">&quot;-&quot;</span><span class="p">,</span>
+<span class="w">            </span><span class="nf">str_split</span><span class="p">(</span><span class="n">name</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;--&quot;</span><span class="p">)[[</span><span class="m">1</span><span class="p">]][</span><span class="m">3</span><span class="p">]</span><span class="w">   </span><span class="c1"># tissue       e.g. &quot;Sphaerotylus&quot;</span>
+<span class="w">          </span><span class="p">)</span>
+<span class="w">        </span><span class="p">)</span><span class="w"> </span><span class="o">%&gt;%</span>
+<span class="w">        </span><span class="nf">ungroup</span><span class="p">()</span><span class="w"> </span><span class="o">%&gt;%</span>
+<span class="w">        </span><span class="nf">select</span><span class="p">(</span><span class="o">-</span><span class="n">name</span><span class="p">,</span><span class="w"> </span><span class="o">-</span><span class="n">unit</span><span class="p">,</span><span class="w"> </span><span class="o">-</span><span class="n">type</span><span class="p">)</span><span class="w"> </span><span class="o">%&gt;%</span>
+<span class="w">        </span><span class="nf">rename_with</span><span class="p">(</span><span class="o">~</span><span class="w"> </span><span class="nf">paste0</span><span class="p">(</span><span class="n">.x</span><span class="p">,</span><span class="w"> </span><span class="s">&quot; [mg/kg]&quot;</span><span class="p">),</span><span class="w"> </span><span class="o">-</span><span class="n">id</span><span class="p">)</span><span class="w"> </span><span class="o">%&gt;%</span><span class="w"> </span><span class="c1"># add units</span>
+<span class="w">        </span><span class="nf">select</span><span class="p">(</span><span class="n">id</span><span class="p">,</span><span class="w"> </span><span class="nf">everything</span><span class="p">())</span>
+<span class="w">  </span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<input id="sd-tab-item-7" name="sd-tab-set-3" type="radio">
+</input><label class="sd-tab-label" data-sync-id="python" for="sd-tab-item-7">
+Python</label><div class="sd-tab-content docutils">
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">make_id</span><span class="p">(</span><span class="n">name</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
+    <span class="n">parts</span> <span class="o">=</span> <span class="n">name</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s2">&quot;--&quot;</span><span class="p">)</span>
+    <span class="k">return</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">parts</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="si">}</span><span class="s2">-</span><span class="si">{</span><span class="n">parts</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span><span class="si">}</span><span class="s2">&quot;</span>   <span class="c1"># e.g. &quot;SB2-1-Sphaerotylus&quot;</span>
+
+<span class="k">for</span> <span class="n">key</span><span class="p">,</span> <span class="n">grp</span> <span class="ow">in</span> <span class="n">groups</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+    <span class="n">grp</span><span class="p">[</span><span class="s2">&quot;id&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">grp</span><span class="p">[</span><span class="s2">&quot;name&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="n">make_id</span><span class="p">)</span>
+    <span class="n">grp</span><span class="o">.</span><span class="n">drop</span><span class="p">(</span><span class="n">columns</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;name&quot;</span><span class="p">,</span> <span class="s2">&quot;unit&quot;</span><span class="p">,</span> <span class="s2">&quot;type&quot;</span><span class="p">],</span> <span class="n">inplace</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+
+    <span class="c1"># Add unit label to every measurement column</span>
+    <span class="n">meas_cols</span> <span class="o">=</span> <span class="p">[</span><span class="n">c</span> <span class="k">for</span> <span class="n">c</span> <span class="ow">in</span> <span class="n">grp</span><span class="o">.</span><span class="n">columns</span> <span class="k">if</span> <span class="n">c</span> <span class="o">!=</span> <span class="s2">&quot;id&quot;</span><span class="p">]</span>
+    <span class="n">grp</span><span class="o">.</span><span class="n">rename</span><span class="p">(</span><span class="n">columns</span><span class="o">=</span><span class="p">{</span><span class="n">c</span><span class="p">:</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">c</span><span class="si">}</span><span class="s2"> [mg/kg]&quot;</span> <span class="k">for</span> <span class="n">c</span> <span class="ow">in</span> <span class="n">meas_cols</span><span class="p">},</span> <span class="n">inplace</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+
+    <span class="c1"># id column first</span>
+    <span class="n">groups</span><span class="p">[</span><span class="n">key</span><span class="p">]</span> <span class="o">=</span> <span class="n">grp</span><span class="p">[[</span><span class="s2">&quot;id&quot;</span><span class="p">]</span> <span class="o">+</span> <span class="p">[</span><span class="n">c</span> <span class="k">for</span> <span class="n">c</span> <span class="ow">in</span> <span class="n">grp</span><span class="o">.</span><span class="n">columns</span> <span class="k">if</span> <span class="n">c</span> <span class="o">!=</span> <span class="s2">&quot;id&quot;</span><span class="p">]]</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<hr class="docutils" />
+<section id="step-4-add-spatial-and-temporal-metadata">
+<h2>Step 4: Add Spatial and Temporal Metadata<a class="headerlink" href="#step-4-add-spatial-and-temporal-metadata" title="Link to this heading">#</a></h2>
+<p>Each sample inherits the collection’s spatial location in decimal degrees and collection date is added in ISO 8601 format. Columns are lowercased for consistency. The dataset is spatially and temporally anchored.</p>
+<table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p>id</p></th>
+<th class="head"><p>time</p></th>
+<th class="head text-center"><p>latitude</p></th>
+<th class="head text-center"><p>longitude</p></th>
+<th class="head text-center"><p>arsenic [mg/kg]</p></th>
+<th class="head text-center"><p>cadmium [mg/kg]</p></th>
+<th class="head text-center"><p>…</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>SB2-1-Sphaerotylus</p></td>
+<td><p>2023-10-21T00:00:00Z</p></td>
+<td class="text-center"><p>-77.85383</p></td>
+<td class="text-center"><p>166.7759</p></td>
+<td class="text-center"><p>1.48</p></td>
+<td class="text-center"><p>7.30</p></td>
+<td class="text-center"><p>…</p></td>
+</tr>
+<tr class="row-odd"><td><p>SB2-2-Sphaerotylus</p></td>
+<td><p>2023-10-21T00:00:00Z</p></td>
+<td class="text-center"><p>-77.85383</p></td>
+<td class="text-center"><p>166.7759</p></td>
+<td class="text-center"><p>1.27</p></td>
+<td class="text-center"><p>5.90</p></td>
+<td class="text-center"><p>…</p></td>
+</tr>
+<tr class="row-even"><td><p>SB2-1-Laternula</p></td>
+<td><p>2023-10-21T00:00:00Z</p></td>
+<td class="text-center"><p>-77.85383</p></td>
+<td class="text-center"><p>166.7759</p></td>
+<td class="text-center"><p>5.70</p></td>
+<td class="text-center"><p>6.30</p></td>
+<td class="text-center"><p>…</p></td>
+</tr>
+</tbody>
+</table>
+<div class="sd-tab-set docutils">
+<input checked="checked" id="sd-tab-item-8" name="sd-tab-set-4" type="radio">
+</input><label class="sd-tab-label" data-sync-id="r" for="sd-tab-item-8">
+R</label><div class="sd-tab-content docutils">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="n">ds_tissue</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">ds_tissue</span><span class="w"> </span><span class="o">%&gt;%</span>
+<span class="w">  </span><span class="nf">map</span><span class="p">(</span><span class="o">~</span><span class="w"> </span><span class="n">.x</span><span class="w"> </span><span class="o">%&gt;%</span>
+<span class="w">        </span><span class="nf">mutate</span><span class="p">(</span>
+<span class="w">          </span><span class="n">latitude</span><span class="w">  </span><span class="o">=</span><span class="w"> </span><span class="m">-77.85383</span><span class="p">,</span>
+<span class="w">          </span><span class="n">longitude</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">166.7759</span><span class="p">,</span>
+<span class="w">          </span><span class="n">time</span><span class="w">      </span><span class="o">=</span><span class="w"> </span><span class="nf">ymd_hms</span><span class="p">(</span><span class="s">&quot;2023-10-21T00:00:00Z&quot;</span><span class="p">)</span>
+<span class="w">        </span><span class="p">)</span><span class="w"> </span><span class="o">%&gt;%</span>
+<span class="w">        </span><span class="nf">rename_with</span><span class="p">(</span><span class="n">tolower</span><span class="p">)</span><span class="w"> </span><span class="o">%&gt;%</span>
+<span class="w">        </span><span class="nf">select</span><span class="p">(</span><span class="n">id</span><span class="p">,</span><span class="w"> </span><span class="n">time</span><span class="p">,</span><span class="w"> </span><span class="n">latitude</span><span class="p">,</span><span class="w"> </span><span class="n">longitude</span><span class="p">,</span><span class="w"> </span><span class="nf">everything</span><span class="p">())</span>
+<span class="w">  </span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<input id="sd-tab-item-9" name="sd-tab-set-4" type="radio">
+</input><label class="sd-tab-label" data-sync-id="python" for="sd-tab-item-9">
+Python</label><div class="sd-tab-content docutils">
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">key</span><span class="p">,</span> <span class="n">grp</span> <span class="ow">in</span> <span class="n">groups</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+    <span class="n">grp</span><span class="p">[</span><span class="s2">&quot;latitude&quot;</span><span class="p">]</span>  <span class="o">=</span> <span class="o">-</span><span class="mf">77.85383</span>
+    <span class="n">grp</span><span class="p">[</span><span class="s2">&quot;longitude&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="mf">166.7759</span>
+    <span class="n">grp</span><span class="p">[</span><span class="s2">&quot;time&quot;</span><span class="p">]</span>      <span class="o">=</span> <span class="n">datetime</span><span class="p">(</span><span class="mi">2023</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">21</span><span class="p">,</span> <span class="n">tzinfo</span><span class="o">=</span><span class="n">timezone</span><span class="o">.</span><span class="n">utc</span><span class="p">)</span>
+    <span class="n">grp</span><span class="o">.</span><span class="n">columns</span>      <span class="o">=</span> <span class="p">[</span><span class="n">c</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span> <span class="k">for</span> <span class="n">c</span> <span class="ow">in</span> <span class="n">grp</span><span class="o">.</span><span class="n">columns</span><span class="p">]</span>
+
+    <span class="n">front</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;id&quot;</span><span class="p">,</span> <span class="s2">&quot;time&quot;</span><span class="p">,</span> <span class="s2">&quot;latitude&quot;</span><span class="p">,</span> <span class="s2">&quot;longitude&quot;</span><span class="p">]</span>
+    <span class="n">rest</span>  <span class="o">=</span> <span class="p">[</span><span class="n">c</span> <span class="k">for</span> <span class="n">c</span> <span class="ow">in</span> <span class="n">grp</span><span class="o">.</span><span class="n">columns</span> <span class="k">if</span> <span class="n">c</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">front</span><span class="p">]</span>
+    <span class="n">groups</span><span class="p">[</span><span class="n">key</span><span class="p">]</span> <span class="o">=</span> <span class="n">grp</span><span class="p">[</span><span class="n">front</span> <span class="o">+</span> <span class="n">rest</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<hr class="docutils" />
+<section id="step-5-standardise-naming-and-data-types">
+<h2>Step 5: Standardise Naming and Data Types<a class="headerlink" href="#step-5-standardise-naming-and-data-types" title="Link to this heading">#</a></h2>
+<p>Trace metal columns are cast to numeric (all values in this class are clean numbers). PAH and PCB column names are corrected to match standard nomenclature: two PAH names are updated to use bracket notation, and PCB column prefixes are expanded from abbreviation to full name. I used the <a class="reference external" href="https://vocab.nerc.ac.uk/collection/S27/current/">NERC Vocabulary Server</a> to verify naming.</p>
+<div class="sd-tab-set docutils">
+<input checked="checked" id="sd-tab-item-10" name="sd-tab-set-5" type="radio">
+</input><label class="sd-tab-label" data-sync-id="r" for="sd-tab-item-10">
+R</label><div class="sd-tab-content docutils">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="c1"># Trace metals: enforce numeric type</span>
+<span class="n">ds_tissue</span><span class="o">$</span><span class="n">`trace metals`</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">ds_tissue</span><span class="o">$</span><span class="n">`trace metals`</span><span class="w"> </span><span class="o">%&gt;%</span>
+<span class="w">  </span><span class="nf">mutate</span><span class="p">(</span><span class="nf">across</span><span class="p">(</span><span class="o">-</span><span class="nf">c</span><span class="p">(</span><span class="n">id</span><span class="p">,</span><span class="w"> </span><span class="n">time</span><span class="p">),</span><span class="w"> </span><span class="n">as.numeric</span><span class="p">))</span>
+
+<span class="c1"># PAHs: correct two non-standard names</span>
+<span class="n">ds_tissue</span><span class="o">$</span><span class="n">`Polycyclic Aromatic Hydrocarbons in Biomatter`</span><span class="w"> </span><span class="o">&lt;-</span>
+<span class="w">  </span><span class="n">ds_tissue</span><span class="o">$</span><span class="n">`Polycyclic Aromatic Hydrocarbons in Biomatter`</span><span class="w"> </span><span class="o">%&gt;%</span>
+<span class="w">  </span><span class="nf">rename</span><span class="p">(</span>
+<span class="w">    </span><span class="n">`benzo[a]pyrene [mg/kg]`</span><span class="w">       </span><span class="o">=</span><span class="w"> </span><span class="n">`benzo[a]pyrene (bap) [mg/kg]`</span><span class="p">,</span>
+<span class="w">    </span><span class="n">`indeno[1,2,3-cd]pyrene [mg/kg]`</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">`indeno(1,2,3-c,d)pyrene [mg/kg]`</span>
+<span class="w">  </span><span class="p">)</span>
+
+<span class="c1"># PCBs: expand abbreviated prefix to full name</span>
+<span class="n">ds_tissue</span><span class="o">$</span><span class="n">`Polychlorinated biphenyls in Biomatter`</span><span class="w"> </span><span class="o">&lt;-</span>
+<span class="w">  </span><span class="n">ds_tissue</span><span class="o">$</span><span class="n">`Polychlorinated biphenyls in Biomatter`</span><span class="w"> </span><span class="o">%&gt;%</span>
+<span class="w">  </span><span class="nf">rename_with</span><span class="p">(</span><span class="o">~</span><span class="w"> </span><span class="nf">str_replace_all</span><span class="p">(</span><span class="n">.</span><span class="p">,</span><span class="w"> </span><span class="nf">regex</span><span class="p">(</span><span class="s">&quot;^pcb-&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">ignore_case</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">TRUE</span><span class="p">),</span>
+<span class="w">                                </span><span class="s">&quot;polychlorinated biphenyl &quot;</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<input id="sd-tab-item-11" name="sd-tab-set-5" type="radio">
+</input><label class="sd-tab-label" data-sync-id="python" for="sd-tab-item-11">
+Python</label><div class="sd-tab-content docutils">
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Trace metals: enforce numeric type</span>
+<span class="n">tm</span> <span class="o">=</span> <span class="n">groups</span><span class="p">[</span><span class="s2">&quot;trace metals&quot;</span><span class="p">]</span>
+<span class="n">num_cols</span> <span class="o">=</span> <span class="p">[</span><span class="n">c</span> <span class="k">for</span> <span class="n">c</span> <span class="ow">in</span> <span class="n">tm</span><span class="o">.</span><span class="n">columns</span> <span class="k">if</span> <span class="n">c</span> <span class="ow">not</span> <span class="ow">in</span> <span class="p">(</span><span class="s2">&quot;id&quot;</span><span class="p">,</span> <span class="s2">&quot;time&quot;</span><span class="p">)]</span>
+<span class="n">groups</span><span class="p">[</span><span class="s2">&quot;trace metals&quot;</span><span class="p">][</span><span class="n">num_cols</span><span class="p">]</span> <span class="o">=</span> <span class="n">tm</span><span class="p">[</span><span class="n">num_cols</span><span class="p">]</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="n">pd</span><span class="o">.</span><span class="n">to_numeric</span><span class="p">,</span> <span class="n">errors</span><span class="o">=</span><span class="s2">&quot;coerce&quot;</span><span class="p">)</span>
+
+<span class="c1"># PAHs: correct two non-standard names</span>
+<span class="n">pah_key</span> <span class="o">=</span> <span class="s2">&quot;Polycyclic Aromatic Hydrocarbons in Biomatter&quot;</span>
+<span class="n">groups</span><span class="p">[</span><span class="n">pah_key</span><span class="p">]</span><span class="o">.</span><span class="n">rename</span><span class="p">(</span><span class="n">columns</span><span class="o">=</span><span class="p">{</span>
+    <span class="s2">&quot;benzo[a]pyrene (bap) [mg/kg]&quot;</span><span class="p">:</span>      <span class="s2">&quot;benzo[a]pyrene [mg/kg]&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;indeno(1,2,3-c,d)pyrene [mg/kg]&quot;</span><span class="p">:</span>   <span class="s2">&quot;indeno[1,2,3-cd]pyrene [mg/kg]&quot;</span><span class="p">,</span>
+<span class="p">},</span> <span class="n">inplace</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+
+<span class="c1"># PCBs: expand abbreviated prefix to full name</span>
+<span class="n">pcb_key</span> <span class="o">=</span> <span class="s2">&quot;Polychlorinated biphenyls in Biomatter&quot;</span>
+<span class="n">groups</span><span class="p">[</span><span class="n">pcb_key</span><span class="p">]</span><span class="o">.</span><span class="n">rename</span><span class="p">(</span>
+    <span class="n">columns</span><span class="o">=</span><span class="k">lambda</span> <span class="n">c</span><span class="p">:</span> <span class="n">re</span><span class="o">.</span><span class="n">sub</span><span class="p">(</span><span class="sa">r</span><span class="s2">&quot;(?i)^pcb-&quot;</span><span class="p">,</span> <span class="s2">&quot;polychlorinated biphenyl &quot;</span><span class="p">,</span> <span class="n">c</span><span class="p">),</span>
+    <span class="n">inplace</span><span class="o">=</span><span class="kc">True</span>
+<span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<hr class="docutils" />
+<section id="step-6-export">
+<h2>Step 6: Export<a class="headerlink" href="#step-6-export" title="Link to this heading">#</a></h2>
+<p>Each contaminant class is written to its own CSV file, ready for archiving and linking to the catalogue.</p>
+<div class="sd-tab-set docutils">
+<input checked="checked" id="sd-tab-item-12" name="sd-tab-set-6" type="radio">
+</input><label class="sd-tab-label" data-sync-id="r" for="sd-tab-item-12">
+R</label><div class="sd-tab-content docutils">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="nf">write.csv</span><span class="p">(</span><span class="n">groups</span><span class="p">[[</span><span class="s">&quot;trace metals&quot;</span><span class="p">]],</span>
+<span class="w">          </span><span class="s">&quot;trace_metals_in_biomatter.csv&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">row.names</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">FALSE</span><span class="p">)</span>
+
+<span class="nf">write.csv</span><span class="p">(</span><span class="n">groups</span><span class="p">[[</span><span class="s">&quot;Polycyclic Aromatic Hydrocarbons in Biomatter&quot;</span><span class="p">]],</span>
+<span class="w">          </span><span class="s">&quot;polycyclic_aromatic_hydrocarbons_in_biomatter.csv&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">row.names</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">FALSE</span><span class="p">)</span>
+
+<span class="nf">write.csv</span><span class="p">(</span><span class="n">groups</span><span class="p">[[</span><span class="s">&quot;Polychlorinated biphenyls in Biomatter&quot;</span><span class="p">]],</span>
+<span class="w">          </span><span class="s">&quot;polychlorinated_biphenyls_in_biomatter.csv&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">row.names</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">FALSE</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<input id="sd-tab-item-13" name="sd-tab-set-6" type="radio">
+</input><label class="sd-tab-label" data-sync-id="python" for="sd-tab-item-13">
+Python</label><div class="sd-tab-content docutils">
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">name_map</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s2">&quot;trace metals&quot;</span><span class="p">:</span>                                  <span class="s2">&quot;trace_metals_in_biomatter.csv&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;Polycyclic Aromatic Hydrocarbons in Biomatter&quot;</span><span class="p">:</span> <span class="s2">&quot;polycyclic_aromatic_hydrocarbons_in_biomatter.csv&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;Polychlorinated biphenyls in Biomatter&quot;</span><span class="p">:</span>        <span class="s2">&quot;polychlorinated_biphenyls_in_biomatter.csv&quot;</span><span class="p">,</span>
+<span class="p">}</span>
+
+<span class="k">for</span> <span class="n">key</span><span class="p">,</span> <span class="n">filename</span> <span class="ow">in</span> <span class="n">name_map</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+    <span class="n">groups</span><span class="p">[</span><span class="n">key</span><span class="p">]</span><span class="o">.</span><span class="n">to_csv</span><span class="p">(</span><span class="n">filename</span><span class="p">,</span> <span class="n">index</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p><strong>Download output files</strong><br>
+<a class="reference download internal" download="" href="_downloads/c867450f097e61b754fdfa3795552f9f/trace_metals_in_biomatter.csv"><code class="xref download docutils literal notranslate"><span class="pre">trace_metals_in_biomatter.csv</span></code></a><br>
+<a class="reference download internal" download="" href="_downloads/b8cc15c8da31ddaa135802dd6e489676/polycyclic_aromatic_hydrocarbons_in_biomatter.csv"><code class="xref download docutils literal notranslate"><span class="pre">polycyclic_aromatic_hydrocarbons_in_biomatter.csv</span></code></a><br>
+<a class="reference download internal" download="" href="_downloads/e34f8f0e922347984ef1328b0f8a3f52/polychlorinated_biphenyls_in_biomatter.csv"><code class="xref download docutils literal notranslate"><span class="pre">polychlorinated_biphenyls_in_biomatter.csv</span></code></a></p>
+<div class="admonition-further admonition">
+<p class="admonition-title">Further</p>
+<p>Once exported, link each CSV to a metadata record in the Antarctic Metadata Catalogue. These records are then grouped into a collection.</p>
+</div>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="data_formatting.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Data Formatting</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="netcdf_tutorial.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">NetCDF Data</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-1-transform-raw-lab-data">Step 1: Transform Raw Lab Data</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-2-read-and-reshape">Step 2: Read and Reshape</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-3-create-sample-ids">Step 3: Create Sample IDs</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-4-add-spatial-and-temporal-metadata">Step 4: Add Spatial and Temporal Metadata</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-5-standardise-naming-and-data-types">Step 5: Standardise Naming and Data Types</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-6-export">Step 6: Export</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Mike Meredyth-Young
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae"></script>
+<script src="_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

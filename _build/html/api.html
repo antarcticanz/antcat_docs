@@ -32,9 +32,10 @@
     <link rel="stylesheet" type="text/css" href="_static/styles/sphinx-book-theme.css?v=384b581d" />
     <link rel="stylesheet" type="text/css" href="_static/togglebutton.css?v=13237357" />
     <link rel="stylesheet" type="text/css" href="_static/copybutton.css?v=76b2166b" />
-    <link rel="stylesheet" type="text/css" href="_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
     <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css?v=4fa983c6" />
     <link rel="stylesheet" type="text/css" href="_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css?v=0a3b3ea7" />
+    <link rel="stylesheet" type="text/css" href="_static/custom.css?v=325fe235" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
   <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae" />
@@ -61,7 +62,7 @@
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
     <link rel="next" title="Site Map" href="sitemap.html" />
-    <link rel="prev" title="FAIR Data" href="fair_data.html" />
+    <link rel="prev" title="Tools" href="tools.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -178,33 +179,30 @@
         </ul>
         <ul class="current nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="getting_started.html">Getting Started</a></li>
-<li class="toctree-l1"><a class="reference internal" href="account.html">Account</a></li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="metadata.html">Metadata</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l1"><a class="reference internal" href="integrations.html">Connected Portals</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="fair_data.html">FAIR Data</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
 <li class="toctree-l2"><a class="reference internal" href="metadata_guidance.html">Metadata Guidance</a></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="data_formatting.html">Data Formatting</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="ssfc_tutorial.html">Tabular Data</a></li>
+<li class="toctree-l3"><a class="reference internal" href="netcdf_tutorial.html">NetCDF Data</a></li>
+<li class="toctree-l3"><a class="reference internal" href="darwin_core.html">Darwin Core</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="fair_data.html">FAIR Data</a></li>
-<li class="toctree-l1 current active has-children"><a class="current reference internal" href="#">API</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="sitemap.html">Site Map</a></li>
-<li class="toctree-l2"><a class="reference internal" href="schemaorg.html"><span style="text-decoration: none;">Schema.org</span></a></li>
-<li class="toctree-l2"><a class="reference internal" href="csw.html">Catalogue Service for the Web</a></li>
-<li class="toctree-l2"><a class="reference internal" href="qsearch.html">Q Search</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="integrations.html">Integrations</a></li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="tutorial.html">Tutorials</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2 has-children"><a class="reference internal" href="metadata_tutorial.html">Metadata</a><input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-4"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l3"><a class="reference internal" href="create_metadata.html">Create Metadata</a></li>
-<li class="toctree-l3"><a class="reference internal" href="edit_metadata.html">Edit Metadata</a></li>
-<li class="toctree-l3"><a class="reference internal" href="publish_metadata.html">Publish Metadata</a></li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="link_data.html">Link Data</a></li>
-<li class="toctree-l2"><a class="reference internal" href="qgis.html">QGIS</a></li>
-<li class="toctree-l2"><a class="reference internal" href="python.html">Python</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="community_data_principles.html">Community Data Principles</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="principles.html">Principles</a></li>
+<li class="toctree-l2"><a class="reference internal" href="data_archiving.html">Data Archiving</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="tools.html">Tools</a></li>
+<li class="toctree-l1 current active has-children"><a class="current reference internal" href="#">Technical</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-4"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="sitemap.html">Site Map</a></li>
+<li class="toctree-l2"><a class="reference internal" href="schemaorg.html">Schema.org</a></li>
+<li class="toctree-l2"><a class="reference internal" href="csw.html">Catalogue Service for the Web</a></li>
+<li class="toctree-l2"><a class="reference internal" href="qsearch.html">Search</a></li>
+</ul>
+</li>
 </ul>
 
     </div>
@@ -246,53 +244,6 @@
         <div class="header-article-item">
 
 <div class="article-header-buttons">
-
-
-
-
-
-<div class="dropdown dropdown-source-buttons">
-  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
-    <i class="fab fa-github"></i>
-  </button>
-  <ul class="dropdown-menu">
-      
-      
-      
-      <li><a href="https://github.com/executablebooks/jupyter-book" target="_blank"
-   class="btn btn-sm btn-source-repository-button dropdown-item"
-   title="Source repository"
-   data-bs-placement="left" data-bs-toggle="tooltip"
->
-  
-
-<span class="btn__icon-container">
-  <i class="fab fa-github"></i>
-  </span>
-<span class="btn__text-container">Repository</span>
-</a>
-</li>
-      
-      
-      
-      
-      <li><a href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2Fapi.html&body=Your%20issue%20content%20here." target="_blank"
-   class="btn btn-sm btn-source-issues-button dropdown-item"
-   title="Open an issue"
-   data-bs-placement="left" data-bs-toggle="tooltip"
->
-  
-
-<span class="btn__icon-container">
-  <i class="fas fa-lightbulb"></i>
-  </span>
-<span class="btn__text-container">Open issue</span>
-</a>
-</li>
-      
-  </ul>
-</div>
-
 
 
 
@@ -404,7 +355,7 @@ document.write(`
                   
   <section class="tex2jax_ignore mathjax_ignore" id="api">
 <h1>API<a class="headerlink" href="#api" title="Link to this heading">#</a></h1>
-<p>The catalouge has numerous endpoints which it uses to make the metadata and associated data available to other data catalogues/data aggegators/data products/users acessing the catalogue from the command line programatically.</p>
+<p>The catalogue has numerous endpoints which it uses to make the metadata and associated data available to other data catalogues, data aggregators, data products, and users accessing the catalogue programmatically from the command line.</p>
 <p>Detailed documentation describing the API endpoints can be found at:</p>
 <ul class="simple">
 <li><p><a class="reference external" href="https://docs.geonetwork-opensource.org/4.4/api/the-geonetwork-api/">GeoNetwork Documentation</a></p></li>
@@ -445,12 +396,12 @@ document.write(`
                   
 <div class="prev-next-area">
     <a class="left-prev"
-       href="fair_data.html"
+       href="tools.html"
        title="previous page">
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">FAIR Data</p>
+        <p class="prev-next-title">Tools</p>
       </div>
     </a>
     <a class="right-next"
@@ -487,13 +438,6 @@ By Mike Meredyth-Young
   
   <div class="footer-item">
     
-
-  <p class="copyright">
-    
-      © Copyright 2023.
-      <br/>
-    
-  </p>
 
   </div>
   

@@ -5,31 +5,35 @@ title: Antarctic Metadata Catalogue
 author: Mike Meredyth-Young
 logo: logo.png
 
-# Force re-execution of notebooks on each build.
-# See https://jupyterbook.org/content/execute.html
+# No executable notebooks in this book
 execute:
-  execute_notebooks: force
+  execute_notebooks: off
 
 # Define the name of the latex output file for PDF builds
 latex:
   latex_documents:
     targetname: book.tex
 
-# Add a bibtex file so that we can create citations
-bibtex_bibfiles:
-  - references.bib
-
 # Information about where the book exists on the web
+# TODO: update url to the actual repository once confirmed
 repository:
-  url: https://github.com/executablebooks/jupyter-book  # Online location of your book
-  path_to_book: docs  # Optional path to your book, relative to the repository root
-  branch: main  # Which branch of the repository should be used when creating links (optional)
+  url: https://github.com/executablebooks/jupyter-book
+  path_to_book: docs
+  branch: main
 
-# Add GitHub buttons to your book
-# See https://jupyterbook.org/customize/config.html#add-a-link-to-your-repository
+# GitHub buttons – disabled until the repository URL is confirmed
 html:
-  use_issues_button: true
-  use_repository_button: true
+  use_issues_button: false
+  use_repository_button: false
+
+# Sphinx configuration
+sphinx:
+  extra_extensions:
+    - sphinx_design
+  config:
+    html_css_files:
+      - custom.css
+    html_show_copyright: false
 
 # Set the baseurl for GitHub Pages deployment
 baseurl: "/antcat_docs"
