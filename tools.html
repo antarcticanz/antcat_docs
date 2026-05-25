@@ -32,9 +32,10 @@
     <link rel="stylesheet" type="text/css" href="_static/styles/sphinx-book-theme.css?v=384b581d" />
     <link rel="stylesheet" type="text/css" href="_static/togglebutton.css?v=13237357" />
     <link rel="stylesheet" type="text/css" href="_static/copybutton.css?v=76b2166b" />
-    <link rel="stylesheet" type="text/css" href="_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
     <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css?v=4fa983c6" />
     <link rel="stylesheet" type="text/css" href="_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css?v=0a3b3ea7" />
+    <link rel="stylesheet" type="text/css" href="_static/custom.css?v=325fe235" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
   <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae" />
@@ -60,7 +61,8 @@
     <script>DOCUMENTATION_OPTIONS.pagename = 'tools';</script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="prev" title="Python" href="python.html" />
+    <link rel="next" title="API" href="api.html" />
+    <link rel="prev" title="Data Archiving" href="data_archiving.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -177,33 +179,30 @@
         </ul>
         <ul class="current nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="getting_started.html">Getting Started</a></li>
-<li class="toctree-l1"><a class="reference internal" href="account.html">Account</a></li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="metadata.html">Metadata</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l1"><a class="reference internal" href="integrations.html">Connected Portals</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="fair_data.html">FAIR Data</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
 <li class="toctree-l2"><a class="reference internal" href="metadata_guidance.html">Metadata Guidance</a></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="data_formatting.html">Data Formatting</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="ssfc_tutorial.html">Tabular Data</a></li>
+<li class="toctree-l3"><a class="reference internal" href="netcdf_tutorial.html">NetCDF Data</a></li>
+<li class="toctree-l3"><a class="reference internal" href="darwin_core.html">Darwin Core</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="fair_data.html">FAIR Data</a></li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="api.html">API</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="sitemap.html">Site Map</a></li>
-<li class="toctree-l2"><a class="reference internal" href="schemaorg.html"><span style="text-decoration: none;">Schema.org</span></a></li>
-<li class="toctree-l2"><a class="reference internal" href="csw.html">Catalogue Service for the Web</a></li>
-<li class="toctree-l2"><a class="reference internal" href="qsearch.html">Q Search</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="integrations.html">Integrations</a></li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="tutorial.html">Tutorials</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2 has-children"><a class="reference internal" href="metadata_tutorial.html">Metadata</a><input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-4"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l3"><a class="reference internal" href="create_metadata.html">Create Metadata</a></li>
-<li class="toctree-l3"><a class="reference internal" href="edit_metadata.html">Edit Metadata</a></li>
-<li class="toctree-l3"><a class="reference internal" href="publish_metadata.html">Publish Metadata</a></li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="link_data.html">Link Data</a></li>
-<li class="toctree-l2"><a class="reference internal" href="qgis.html">QGIS</a></li>
-<li class="toctree-l2"><a class="reference internal" href="python.html">Python</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="community_data_principles.html">Community Data Principles</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="principles.html">Principles</a></li>
+<li class="toctree-l2"><a class="reference internal" href="data_archiving.html">Data Archiving</a></li>
 </ul>
 </li>
 <li class="toctree-l1 current active"><a class="current reference internal" href="#">Tools</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="api.html">Technical</a><input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-4"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="sitemap.html">Site Map</a></li>
+<li class="toctree-l2"><a class="reference internal" href="schemaorg.html">Schema.org</a></li>
+<li class="toctree-l2"><a class="reference internal" href="csw.html">Catalogue Service for the Web</a></li>
+<li class="toctree-l2"><a class="reference internal" href="qsearch.html">Search</a></li>
+</ul>
+</li>
 </ul>
 
     </div>
@@ -245,53 +244,6 @@
         <div class="header-article-item">
 
 <div class="article-header-buttons">
-
-
-
-
-
-<div class="dropdown dropdown-source-buttons">
-  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
-    <i class="fab fa-github"></i>
-  </button>
-  <ul class="dropdown-menu">
-      
-      
-      
-      <li><a href="https://github.com/executablebooks/jupyter-book" target="_blank"
-   class="btn btn-sm btn-source-repository-button dropdown-item"
-   title="Source repository"
-   data-bs-placement="left" data-bs-toggle="tooltip"
->
-  
-
-<span class="btn__icon-container">
-  <i class="fab fa-github"></i>
-  </span>
-<span class="btn__text-container">Repository</span>
-</a>
-</li>
-      
-      
-      
-      
-      <li><a href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2Ftools.html&body=Your%20issue%20content%20here." target="_blank"
-   class="btn btn-sm btn-source-issues-button dropdown-item"
-   title="Open an issue"
-   data-bs-placement="left" data-bs-toggle="tooltip"
->
-  
-
-<span class="btn__icon-container">
-  <i class="fas fa-lightbulb"></i>
-  </span>
-<span class="btn__text-container">Open issue</span>
-</a>
-</li>
-      
-  </ul>
-</div>
-
 
 
 
@@ -376,9 +328,7 @@ document.write(`
   </button>
 `);
 </script>
-<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <span class="fa-solid fa-list"></span>
-</label>
+
 </div></div>
       
     </div>
@@ -394,16 +344,6 @@ document.write(`
     <div id="print-main-content">
         <div id="jb-print-toc">
             
-            <div>
-                <h2> Contents </h2>
-            </div>
-            <nav aria-label="Page">
-                <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#r">R</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#python">Python</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#qgis">QGIS</a></li>
-</ul>
-            </nav>
         </div>
     </div>
 </div>
@@ -415,27 +355,101 @@ document.write(`
                   
   <section class="tex2jax_ignore mathjax_ignore" id="tools">
 <h1>Tools<a class="headerlink" href="#tools" title="Link to this heading">#</a></h1>
-<section id="r">
-<h2>R<a class="headerlink" href="#r" title="Link to this heading">#</a></h2>
-<ul class="simple">
-<li><p><a class="reference external" href="https://ropensci.org/blog/2018/08/22/rgbif-seven-years/">rgbif</a>, <a class="reference external" href="https://docs.ropensci.org/gbifdb/">gbdif</a>: Access biodiversity data from the Global Biodiversity Information Facility with R.</p></li>
-<li><p><a class="reference external" href="https://docs.ropensci.org/pangaear/?q=gbif#undefined">pangear</a>: data retrieval interface for the World Data Centre PANGAEA with R.</p></li>
-<li><p><a class="reference external" href="https://docs.ropensci.org/clifro/">clifloR</a>: Access Cliflo data with R (includes Scott Base and Arrival Heights climate data).</p></li>
-<li><p><a class="reference external" href="https://evolecolgroup.github.io/pastclim/index.html">pastclim 1.2</a>: an R package to easily access and use paleoclimatic reconstructions.</p></li>
-</ul>
-</section>
-<section id="python">
-<h2>Python<a class="headerlink" href="#python" title="Link to this heading">#</a></h2>
-<ul class="simple">
-<li><p><a class="reference external" href="https://polartoolkit.readthedocs.io/en/latest/">PolarToolKit</a>: A Python package with the goal of making Polar (i.e. Antarctic, Arctic, Greenland) research more efficient, reproducible, and accessible</p></li>
-</ul>
-</section>
-<section id="qgis">
-<h2>QGIS<a class="headerlink" href="#qgis" title="Link to this heading">#</a></h2>
-<ul class="simple">
-<li><p><a class="reference external" href="https://guides.geospatial.bas.ac.uk/using-mapping-data-services/bas-mapping-services/antarctica-and-southern-ocean-basemap-for-desktop-gis">BAS Mapping Data Service</a>: Antarctica and Southern Ocean basemap for Desktop GIS (updated 6 monthly)</p></li>
-</ul>
-</section>
+<div class="sd-container-fluid sd-sphinx-override sd-mb-4 docutils">
+<div class="sd-row sd-row-cols-1 sd-row-cols-xs-1 sd-row-cols-sm-1 sd-row-cols-md-2 sd-row-cols-lg-2 sd-g-3 sd-g-xs-3 sd-g-sm-3 sd-g-md-3 sd-g-lg-3 docutils">
+<div class="sd-col sd-d-flex-row sd-col-12 sd-col-xs-12 sd-col-sm-12 sd-col-md-12 sd-col-lg-12 docutils">
+<div class="sd-card sd-sphinx-override sd-w-100 sd-shadow-sm docutils">
+<div class="sd-card-body docutils">
+<div class="sd-card-title sd-font-weight-bold docutils">
+antcat-search</div>
+<p class="sd-card-text"><span class="sd-sphinx-override sd-badge sd-bg-success sd-bg-text-success">Python</span> · Antarctic Metadata Catalogue Search</p>
+<p class="sd-card-text">Spatial-temporal search of the Antarctic Metadata Catalogue. Query by bounding box, date range, and free-text; results returned as a Pandas DataFrame for use in Jupyter notebooks.</p>
+</div>
+<div class="sd-card-footer docutils">
+<p class="sd-card-text"><a class="reference external" href="https://github.com/antarcticanz/antcat-search">GitHub</a></p>
+</div>
+</div>
+</div>
+<div class="sd-col sd-d-flex-row docutils">
+<div class="sd-card sd-sphinx-override sd-w-100 sd-shadow-sm docutils">
+<div class="sd-card-body docutils">
+<div class="sd-card-title sd-font-weight-bold docutils">
+rgbif / gbifdb</div>
+<p class="sd-card-text"><span class="sd-sphinx-override sd-badge sd-bg-primary sd-bg-text-primary">R</span> · Biodiversity</p>
+<p class="sd-card-text">Access biodiversity data from the Global Biodiversity Information Facility.</p>
+</div>
+<div class="sd-card-footer docutils">
+<p class="sd-card-text"><a class="reference external" href="https://ropensci.org/blog/2018/08/22/rgbif-seven-years/">rgbif</a> · <a class="reference external" href="https://docs.ropensci.org/gbifdb/">gbifdb</a></p>
+</div>
+</div>
+</div>
+<div class="sd-col sd-d-flex-row docutils">
+<div class="sd-card sd-sphinx-override sd-w-100 sd-shadow-sm docutils">
+<div class="sd-card-body docutils">
+<div class="sd-card-title sd-font-weight-bold docutils">
+pangear</div>
+<p class="sd-card-text"><span class="sd-sphinx-override sd-badge sd-bg-primary sd-bg-text-primary">R</span> · Oceanographic</p>
+<p class="sd-card-text">Data retrieval interface for the World Data Centre PANGAEA.</p>
+</div>
+<div class="sd-card-footer docutils">
+<p class="sd-card-text"><a class="reference external" href="https://docs.ropensci.org/pangaear/">Documentation</a></p>
+</div>
+</div>
+</div>
+<div class="sd-col sd-d-flex-row docutils">
+<div class="sd-card sd-sphinx-override sd-w-100 sd-shadow-sm docutils">
+<div class="sd-card-body docutils">
+<div class="sd-card-title sd-font-weight-bold docutils">
+clifloR</div>
+<p class="sd-card-text"><span class="sd-sphinx-override sd-badge sd-bg-primary sd-bg-text-primary">R</span> · Climate</p>
+<p class="sd-card-text">Access CliFlo climate station data with R, including Scott Base and Arrival Heights.</p>
+</div>
+<div class="sd-card-footer docutils">
+<p class="sd-card-text"><a class="reference external" href="https://docs.ropensci.org/clifro/">Documentation</a></p>
+</div>
+</div>
+</div>
+<div class="sd-col sd-d-flex-row docutils">
+<div class="sd-card sd-sphinx-override sd-w-100 sd-shadow-sm docutils">
+<div class="sd-card-body docutils">
+<div class="sd-card-title sd-font-weight-bold docutils">
+pastclim</div>
+<p class="sd-card-text"><span class="sd-sphinx-override sd-badge sd-bg-primary sd-bg-text-primary">R</span> · Paleoclimate</p>
+<p class="sd-card-text">Access and use palaeoclimatic reconstructions in R.</p>
+</div>
+<div class="sd-card-footer docutils">
+<p class="sd-card-text"><a class="reference external" href="https://evolecolgroup.github.io/pastclim/index.html">Documentation</a></p>
+</div>
+</div>
+</div>
+<div class="sd-col sd-d-flex-row docutils">
+<div class="sd-card sd-sphinx-override sd-w-100 sd-shadow-sm docutils">
+<div class="sd-card-body docutils">
+<div class="sd-card-title sd-font-weight-bold docutils">
+PolarToolkit</div>
+<p class="sd-card-text"><span class="sd-sphinx-override sd-badge sd-bg-success sd-bg-text-success">Python</span> · Polar Research</p>
+<p class="sd-card-text">A Python toolkit for efficient, reproducible Antarctic, Arctic, and Greenland research.</p>
+</div>
+<div class="sd-card-footer docutils">
+<p class="sd-card-text"><a class="reference external" href="https://polartoolkit.readthedocs.io/en/latest/">Documentation</a></p>
+</div>
+</div>
+</div>
+<div class="sd-col sd-d-flex-row docutils">
+<div class="sd-card sd-sphinx-override sd-w-100 sd-shadow-sm docutils">
+<div class="sd-card-body docutils">
+<div class="sd-card-title sd-font-weight-bold docutils">
+BAS Mapping Data Service</div>
+<p class="sd-card-text"><span class="sd-sphinx-override sd-badge sd-bg-info sd-bg-text-info">WMS</span> · R · Python · QGIS · ArcGIS</p>
+<p class="sd-card-text">Antarctica and Southern Ocean basemap served as a Web Map Service. Compatible with any WMS-capable client. Updated every 6 months.</p>
+</div>
+<div class="sd-card-footer docutils">
+<p class="sd-card-text"><a class="reference external" href="https://guides.geospatial.bas.ac.uk/using-mapping-data-services/bas-mapping-services/antarctica-and-southern-ocean-basemap-for-desktop-gis">Service guide</a></p>
+</div>
+</div>
+</div>
+</div>
+</div>
 </section>
 
     <script type="text/x-thebe-config">
@@ -469,13 +483,22 @@ document.write(`
                   
 <div class="prev-next-area">
     <a class="left-prev"
-       href="python.html"
+       href="data_archiving.html"
        title="previous page">
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">Python</p>
+        <p class="prev-next-title">Data Archiving</p>
       </div>
+    </a>
+    <a class="right-next"
+       href="api.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">API</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
     </a>
 </div>
                 </footer>
@@ -484,22 +507,7 @@ document.write(`
             
             
               
-                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
-
-
-  <div class="sidebar-secondary-item">
-  <div class="page-toc tocsection onthispage">
-    <i class="fa-solid fa-list"></i> Contents
-  </div>
-  <nav class="bd-toc-nav page-toc">
-    <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#r">R</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#python">Python</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#qgis">QGIS</a></li>
-</ul>
-  </nav></div>
-
-</div></div>
+                <div class="bd-sidebar-secondary bd-toc"></div>
               
             
           </div>
@@ -517,13 +525,6 @@ By Mike Meredyth-Young
   
   <div class="footer-item">
     
-
-  <p class="copyright">
-    
-      © Copyright 2023.
-      <br/>
-    
-  </p>
 
   </div>
   

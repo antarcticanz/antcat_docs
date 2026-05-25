@@ -1,0 +1,1056 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="./" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>NetCDF Data &#8212; Antarctic Metadata Catalogue</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="_static/styles/theme.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+<link href="_static/styles/bootstrap.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+
+  
+  <link href="_static/vendor/fontawesome/6.5.1/css/all.min.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.1/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.1/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.1/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=fa44fd50" />
+    <link rel="stylesheet" type="text/css" href="_static/styles/sphinx-book-theme.css?v=384b581d" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css?v=0a3b3ea7" />
+    <link rel="stylesheet" type="text/css" href="_static/custom.css?v=325fe235" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae" />
+  <script src="_static/vendor/fontawesome/6.5.1/js/all.min.js?digest=8d27b9dea8ad943066ae"></script>
+
+    <script src="_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="_static/doctools.js?v=888ff710"></script>
+    <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="_static/copybutton.js?v=f281be69"></script>
+    <script src="_static/scripts/sphinx-book-theme.js?v=efea14e4"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="_static/togglebutton.js?v=4a39c7ea"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="_static/design-tabs.js?v=36754332"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'netcdf_tutorial';</script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Darwin Core" href="darwin_core.html" />
+    <link rel="prev" title="Tabular Data" href="ssfc_tutorial.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <a id="pst-skip-link" class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>
+    Back to top
+  </button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+
+<a class="navbar-brand logo" href="intro.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="_static/logo.png" class="logo__image only-light" alt="Antarctic Metadata Catalogue - Home"/>
+    <script>document.write(`<img src="_static/logo.png" class="logo__image only-dark" alt="Antarctic Metadata Catalogue - Home"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn navbar-btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="intro.html">
+                    Antarctic Metadata Catalogue
+                </a>
+            </li>
+        </ul>
+        <ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="getting_started.html">Getting Started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="integrations.html">Connected Portals</a></li>
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="fair_data.html">FAIR Data</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="metadata_guidance.html">Metadata Guidance</a></li>
+<li class="toctree-l2 current active has-children"><a class="reference internal" href="data_formatting.html">Data Formatting</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="ssfc_tutorial.html">Tabular Data</a></li>
+<li class="toctree-l3 current active"><a class="current reference internal" href="#">NetCDF Data</a></li>
+<li class="toctree-l3"><a class="reference internal" href="darwin_core.html">Darwin Core</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="community_data_principles.html">Community Data Principles</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="principles.html">Principles</a></li>
+<li class="toctree-l2"><a class="reference internal" href="data_archiving.html">Data Archiving</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="tools.html">Tools</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="api.html">Technical</a><input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-4"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="sitemap.html">Site Map</a></li>
+<li class="toctree-l2"><a class="reference internal" href="schemaorg.html">Schema.org</a></li>
+<li class="toctree-l2"><a class="reference internal" href="csw.html">Catalogue Service for the Web</a></li>
+<li class="toctree-l2"><a class="reference internal" href="qsearch.html">Search</a></li>
+</ul>
+</li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="_sources/netcdf_tutorial.md" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.md</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>NetCDF Data</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#input-data">Input Data</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-1-read-all-depth-files">Step 1: Read All Depth Files</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-2-build-the-master-time-grid">Step 2: Build the Master Time Grid</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-3-create-the-netcdf-file-and-define-dimensions">Step 3: Create the NetCDF File and Define Dimensions</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-4-coordinate-variables">Step 4: Coordinate Variables</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-5-fill-data-arrays">Step 5: Fill Data Arrays</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-6-global-attributes-and-close">Step 6: Global Attributes and Close</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-result">The Result</a></li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="netcdf-data">
+<h1>NetCDF Data<a class="headerlink" href="#netcdf-data" title="Link to this heading">#</a></h1>
+<p>This tutorial builds a CF-1.12 compliant NetCDF file from moored CTD observations beneath the Ross Ice Shelf. Raw data arrives as one CSV file per instrument depth; the script aligns them onto a common time grid and writes a single <code class="docutils literal notranslate"><span class="pre">(time</span> <span class="pre">×</span> <span class="pre">depth)</span></code> NetCDF file with correct coordinate variables and global attributes.</p>
+<p>Before starting this tutorial, the Nansen Legacy provide an excellent template generator that facilitates easy compilation of NetCDF files. Access the template generator <a class="reference external" href="https://www.nordatanet.no/aen/template-generator/config%3DCF-NetCDF">here</a>.</p>
+<p><strong>Download input files</strong><br>
+<a class="reference download internal" download="" href="_downloads/301546265932178975623d53b07416af/shwd21_NoTides.csv"><code class="xref download docutils literal notranslate"><span class="pre">shwd21_NoTides.csv</span></code></a><br>
+<a class="reference download internal" download="" href="_downloads/5475473c9f91d959bbdc113b20c1b4ad/shwd22_NoTides.csv"><code class="xref download docutils literal notranslate"><span class="pre">shwd22_NoTides.csv</span></code></a><br>
+<a class="reference download internal" download="" href="_downloads/3a9c36f5b40ee9147a34187da5bbb03a/shwd23_NoTides.csv"><code class="xref download docutils literal notranslate"><span class="pre">shwd23_NoTides.csv</span></code></a><br>
+<a class="reference download internal" download="" href="_downloads/8bdab906af664034423b63bf916a1385/shwd24_NoTides.csv"><code class="xref download docutils literal notranslate"><span class="pre">shwd24_NoTides.csv</span></code></a><br>
+<a class="reference download internal" download="" href="_downloads/9dd8029a275884bbcfd49856b1a4ad44/shwd25_NoTides.csv"><code class="xref download docutils literal notranslate"><span class="pre">shwd25_NoTides.csv</span></code></a></p>
+<p><strong>Download curated netcdf file</strong><br>
+<a class="reference download internal" download="" href="_downloads/926895365a242f842413193a1fc45530/hwd2_ctd_detided.nc"><code class="xref download docutils literal notranslate"><span class="pre">hwd2_ctd_detided.nc</span></code></a></p>
+<br>
+<p><strong>Script</strong></p>
+<div class="sd-tab-set docutils">
+<input checked="checked" id="sd-tab-item-0" name="sd-tab-set-0" type="radio">
+</input><label class="sd-tab-label" data-sync-id="r" for="sd-tab-item-0">
+R</label><div class="sd-tab-content docutils">
+<p><a class="reference download internal" download="" href="_downloads/bd506161b745139ff877b0aa5d930aee/format_ctd_data.R"><code class="xref download docutils literal notranslate"><span class="pre">format_ctd_data.R</span></code></a></p>
+</div>
+<input id="sd-tab-item-1" name="sd-tab-set-0" type="radio">
+</input><label class="sd-tab-label" data-sync-id="python" for="sd-tab-item-1">
+Python</label><div class="sd-tab-content docutils">
+<p><a class="reference download internal" download="" href="_downloads/d0390191934c9767dce3e1370bba6da5/format_ctd_data.py"><code class="xref download docutils literal notranslate"><span class="pre">format_ctd_data.py</span></code></a></p>
+</div>
+</div>
+<br>
+<p><strong>Dependencies:</strong></p>
+<div class="sd-tab-set docutils">
+<input checked="checked" id="sd-tab-item-2" name="sd-tab-set-1" type="radio">
+</input><label class="sd-tab-label" data-sync-id="r" for="sd-tab-item-2">
+R</label><div class="sd-tab-content docutils">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="nf">library</span><span class="p">(</span><span class="n">tidyverse</span><span class="p">)</span><span class="w">   </span><span class="c1"># readr, purrr, dplyr, stringr</span>
+<span class="nf">library</span><span class="p">(</span><span class="n">RNetCDF</span><span class="p">)</span><span class="w">     </span><span class="c1"># NetCDF read/write</span>
+</pre></div>
+</div>
+</div>
+<input id="sd-tab-item-3" name="sd-tab-set-1" type="radio">
+</input><label class="sd-tab-label" data-sync-id="python" for="sd-tab-item-3">
+Python</label><div class="sd-tab-content docutils">
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">glob</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="kn">from</span> <span class="nn">netCDF4</span> <span class="kn">import</span> <span class="n">Dataset</span>
+</pre></div>
+</div>
+</div>
+</div>
+<hr class="docutils" />
+<section id="input-data">
+<h2>Input Data<a class="headerlink" href="#input-data" title="Link to this heading">#</a></h2>
+<p>Each CSV covers one instrument depth at the HWD2 borehole (beneath the central Ross Ice Shelf, 80.66°S 174.46°E). Observations are at 30-minute intervals. Files for different depths may do not share the same end date. Note that the data have already adopted <a class="reference external" href="https://cfconventions.org/Data/cf-standard-names/current/build/cf-standard-name-table.html">Climate Forecast (CF)</a> parameter naming conventions.</p>
+<img alt="_images/input_netcdf.png" class="align-center" src="_images/input_netcdf.png" />
+</section>
+<hr class="docutils" />
+<section id="step-1-read-all-depth-files">
+<h2>Step 1: Read All Depth Files<a class="headerlink" href="#step-1-read-all-depth-files" title="Link to this heading">#</a></h2>
+<p>All per-depth CSVs are loaded into a named collection so they can be looped over by depth index later.</p>
+<div class="sd-tab-set docutils">
+<input checked="checked" id="sd-tab-item-4" name="sd-tab-set-2" type="radio">
+</input><label class="sd-tab-label" data-sync-id="r" for="sd-tab-item-4">
+R</label><div class="sd-tab-content docutils">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="n">files_notides</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">list.files</span><span class="p">(</span><span class="n">pattern</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;^shwd.*_NoTides\\.csv$&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">full.names</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">TRUE</span><span class="p">)</span>
+<span class="nf">stopifnot</span><span class="p">(</span><span class="nf">length</span><span class="p">(</span><span class="n">files_notides</span><span class="p">)</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="m">0</span><span class="p">)</span>
+
+<span class="c1"># Named list: one data-frame per file (i.e. per depth)</span>
+<span class="n">ds_notides</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">files_notides</span><span class="w"> </span><span class="o">|&gt;</span>
+<span class="w">  </span><span class="nf">set_names</span><span class="p">(</span><span class="nf">basename</span><span class="p">(</span><span class="n">files_notides</span><span class="p">))</span><span class="w"> </span><span class="o">|&gt;</span>
+<span class="w">  </span><span class="nf">map</span><span class="p">(</span><span class="n">read_csv</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<input id="sd-tab-item-5" name="sd-tab-set-2" type="radio">
+</input><label class="sd-tab-label" data-sync-id="python" for="sd-tab-item-5">
+Python</label><div class="sd-tab-content docutils">
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">files</span> <span class="o">=</span> <span class="nb">sorted</span><span class="p">(</span><span class="n">glob</span><span class="o">.</span><span class="n">glob</span><span class="p">(</span><span class="s2">&quot;shwd*_NoTides.csv&quot;</span><span class="p">))</span>
+<span class="k">assert</span> <span class="nb">len</span><span class="p">(</span><span class="n">files</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">,</span> <span class="s2">&quot;No input files found&quot;</span>
+
+<span class="c1"># Named dict: one DataFrame per file (i.e. per depth)</span>
+<span class="n">ds_notides</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="n">f</span><span class="p">:</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="n">f</span><span class="p">,</span> <span class="n">parse_dates</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;time&quot;</span><span class="p">])</span>
+    <span class="k">for</span> <span class="n">f</span> <span class="ow">in</span> <span class="n">files</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<hr class="docutils" />
+<section id="step-2-build-the-master-time-grid">
+<h2>Step 2: Build the Master Time Grid<a class="headerlink" href="#step-2-build-the-master-time-grid" title="Link to this heading">#</a></h2>
+<p>A diagnostic check first confirms that all files share the same start time and that every gap is exactly 30 minutes. Because the check passes, timestamps are already on clean 30-minute boundaries — no floor or ceiling snapping is needed. The master time axis is then built directly from the confirmed start and end times.</p>
+<div class="sd-tab-set docutils">
+<input checked="checked" id="sd-tab-item-6" name="sd-tab-set-3" type="radio">
+</input><label class="sd-tab-label" data-sync-id="r" for="sd-tab-item-6">
+R</label><div class="sd-tab-content docutils">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="n">step</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="m">30</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="m">60</span><span class="w">  </span><span class="c1"># 30 minutes in seconds</span>
+
+<span class="n">start_check</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">ds_notides</span><span class="w"> </span><span class="o">|&gt;</span>
+<span class="w">  </span><span class="nf">lapply</span><span class="p">(</span><span class="nf">function</span><span class="p">(</span><span class="n">df</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="n">t</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">as.POSIXct</span><span class="p">(</span><span class="n">df</span><span class="p">[[</span><span class="s">&quot;time&quot;</span><span class="p">]],</span><span class="w"> </span><span class="n">tz</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;UTC&quot;</span><span class="p">)</span><span class="w"> </span><span class="o">|&gt;</span><span class="w"> </span><span class="nf">sort</span><span class="p">()</span>
+<span class="w">    </span><span class="nf">tibble</span><span class="p">(</span>
+<span class="w">      </span><span class="n">start</span><span class="w">   </span><span class="o">=</span><span class="w"> </span><span class="nf">first</span><span class="p">(</span><span class="n">t</span><span class="p">),</span>
+<span class="w">      </span><span class="n">end</span><span class="w">     </span><span class="o">=</span><span class="w"> </span><span class="nf">last</span><span class="p">(</span><span class="n">t</span><span class="p">),</span>
+<span class="w">      </span><span class="n">n_obs</span><span class="w">   </span><span class="o">=</span><span class="w"> </span><span class="nf">length</span><span class="p">(</span><span class="n">t</span><span class="p">),</span>
+<span class="w">      </span><span class="n">min_gap</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">min</span><span class="p">(</span><span class="nf">diff</span><span class="p">(</span><span class="nf">as.numeric</span><span class="p">(</span><span class="n">t</span><span class="p">))),</span>
+<span class="w">      </span><span class="n">max_gap</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">max</span><span class="p">(</span><span class="nf">diff</span><span class="p">(</span><span class="nf">as.numeric</span><span class="p">(</span><span class="n">t</span><span class="p">)))</span>
+<span class="w">    </span><span class="p">)</span>
+<span class="w">  </span><span class="p">})</span><span class="w"> </span><span class="o">|&gt;</span>
+<span class="w">  </span><span class="nf">bind_rows</span><span class="p">(</span><span class="n">.id</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;file&quot;</span><span class="p">)</span>
+
+<span class="nf">print</span><span class="p">(</span><span class="n">start_check</span><span class="p">)</span>
+
+<span class="nf">stopifnot</span><span class="p">(</span><span class="nf">n_distinct</span><span class="p">(</span><span class="n">start_check</span><span class="o">$</span><span class="n">start</span><span class="p">)</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="m">1</span><span class="p">)</span>
+<span class="nf">stopifnot</span><span class="p">(</span><span class="nf">all</span><span class="p">(</span><span class="n">start_check</span><span class="o">$</span><span class="n">min_gap</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">step</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">start_check</span><span class="o">$</span><span class="n">max_gap</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">step</span><span class="p">))</span>
+
+<span class="n">min_t</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">min</span><span class="p">(</span><span class="n">start_check</span><span class="o">$</span><span class="n">start</span><span class="p">)</span>
+<span class="n">max_t</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">max</span><span class="p">(</span><span class="n">start_check</span><span class="o">$</span><span class="n">end</span><span class="p">)</span>
+
+<span class="n">master_time</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">seq</span><span class="p">(</span><span class="n">min_t</span><span class="p">,</span><span class="w"> </span><span class="n">max_t</span><span class="p">,</span><span class="w"> </span><span class="n">by</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;30 min&quot;</span><span class="p">)</span>
+<span class="nf">cat</span><span class="p">(</span><span class="s">&quot;Time axis:&quot;</span><span class="p">,</span><span class="w"> </span><span class="nf">length</span><span class="p">(</span><span class="n">master_time</span><span class="p">),</span><span class="w"> </span><span class="s">&quot;steps from&quot;</span><span class="p">,</span><span class="w"> </span><span class="nf">format</span><span class="p">(</span><span class="n">min_t</span><span class="p">),</span><span class="w"> </span><span class="s">&quot;to&quot;</span><span class="p">,</span><span class="w"> </span><span class="nf">format</span><span class="p">(</span><span class="n">max_t</span><span class="p">),</span><span class="w"> </span><span class="s">&quot;\n&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<input id="sd-tab-item-7" name="sd-tab-set-3" type="radio">
+</input><label class="sd-tab-label" data-sync-id="python" for="sd-tab-item-7">
+Python</label><div class="sd-tab-content docutils">
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">step_s</span> <span class="o">=</span> <span class="mi">1800</span>  <span class="c1"># 30 minutes in seconds</span>
+
+<span class="n">diagnostics</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="k">for</span> <span class="n">fname</span><span class="p">,</span> <span class="n">df</span> <span class="ow">in</span> <span class="n">ds_notides</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+    <span class="n">t</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">to_datetime</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s2">&quot;time&quot;</span><span class="p">],</span> <span class="n">utc</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span><span class="o">.</span><span class="n">sort_values</span><span class="p">()</span>
+    <span class="n">gaps</span> <span class="o">=</span> <span class="n">t</span><span class="o">.</span><span class="n">diff</span><span class="p">()</span><span class="o">.</span><span class="n">dropna</span><span class="p">()</span><span class="o">.</span><span class="n">dt</span><span class="o">.</span><span class="n">total_seconds</span><span class="p">()</span>
+    <span class="n">diagnostics</span><span class="o">.</span><span class="n">append</span><span class="p">({</span>
+        <span class="s2">&quot;file&quot;</span><span class="p">:</span>      <span class="n">fname</span><span class="p">,</span>
+        <span class="s2">&quot;start&quot;</span><span class="p">:</span>     <span class="n">t</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span>
+        <span class="s2">&quot;end&quot;</span><span class="p">:</span>       <span class="n">t</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">],</span>
+        <span class="s2">&quot;n_obs&quot;</span><span class="p">:</span>     <span class="nb">len</span><span class="p">(</span><span class="n">t</span><span class="p">),</span>
+        <span class="s2">&quot;min_gap_s&quot;</span><span class="p">:</span> <span class="n">gaps</span><span class="o">.</span><span class="n">min</span><span class="p">(),</span>
+        <span class="s2">&quot;max_gap_s&quot;</span><span class="p">:</span> <span class="n">gaps</span><span class="o">.</span><span class="n">max</span><span class="p">(),</span>
+    <span class="p">})</span>
+
+<span class="n">diag_df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">diagnostics</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">diag_df</span><span class="o">.</span><span class="n">to_string</span><span class="p">())</span>
+
+<span class="k">assert</span> <span class="n">diag_df</span><span class="p">[</span><span class="s2">&quot;start&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">nunique</span><span class="p">()</span> <span class="o">==</span> <span class="mi">1</span><span class="p">,</span> <span class="s2">&quot;Files do not all start at the same time&quot;</span>
+<span class="k">assert</span> <span class="p">(</span><span class="n">diag_df</span><span class="p">[</span><span class="s2">&quot;min_gap_s&quot;</span><span class="p">]</span> <span class="o">==</span> <span class="n">step_s</span><span class="p">)</span><span class="o">.</span><span class="n">all</span><span class="p">()</span> <span class="ow">and</span> <span class="p">(</span><span class="n">diag_df</span><span class="p">[</span><span class="s2">&quot;max_gap_s&quot;</span><span class="p">]</span> <span class="o">==</span> <span class="n">step_s</span><span class="p">)</span><span class="o">.</span><span class="n">all</span><span class="p">(),</span> \
+    <span class="s2">&quot;Timestamps are not all exactly 30 min apart&quot;</span>
+
+<span class="n">min_t</span> <span class="o">=</span> <span class="n">diag_df</span><span class="p">[</span><span class="s2">&quot;start&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">min</span><span class="p">()</span>
+<span class="n">max_t</span> <span class="o">=</span> <span class="n">diag_df</span><span class="p">[</span><span class="s2">&quot;end&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">max</span><span class="p">()</span>
+
+<span class="n">master_time</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">date_range</span><span class="p">(</span><span class="n">start</span><span class="o">=</span><span class="n">min_t</span><span class="p">,</span> <span class="n">end</span><span class="o">=</span><span class="n">max_t</span><span class="p">,</span> <span class="n">freq</span><span class="o">=</span><span class="s2">&quot;30min&quot;</span><span class="p">,</span> <span class="n">tz</span><span class="o">=</span><span class="s2">&quot;UTC&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Time axis: </span><span class="si">{</span><span class="nb">len</span><span class="p">(</span><span class="n">master_time</span><span class="p">)</span><span class="si">}</span><span class="s2"> steps from </span><span class="si">{</span><span class="n">min_t</span><span class="si">}</span><span class="s2"> to </span><span class="si">{</span><span class="n">max_t</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p><strong>Master time grid concept</strong> — each file’s observations slot into the shared axis by timestamp match. Gaps (where an instrument stopped early) are filled with the <code class="docutils literal notranslate"><span class="pre">_FillValue</span></code>.</p>
+<table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p>master_time slot</p></th>
+<th class="head text-center"><p>shwd21 (328 dbar)</p></th>
+<th class="head text-center"><p>shwd22 (366 dbar)</p></th>
+<th class="head text-center"><p>…</p></th>
+<th class="head text-center"><p>shwd25 (616 dbar)</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>2018-01-06T00:00:00Z</p></td>
+<td class="text-center"><p>✓</p></td>
+<td class="text-center"><p>✓</p></td>
+<td class="text-center"><p>…</p></td>
+<td class="text-center"><p>✓</p></td>
+</tr>
+<tr class="row-odd"><td><p>2018-01-06T00:30:00Z</p></td>
+<td class="text-center"><p>✓</p></td>
+<td class="text-center"><p>✓</p></td>
+<td class="text-center"><p>…</p></td>
+<td class="text-center"><p>✓</p></td>
+</tr>
+<tr class="row-even"><td><p>…</p></td>
+<td class="text-center"><p></p></td>
+<td class="text-center"><p></p></td>
+<td class="text-center"><p></p></td>
+<td class="text-center"><p></p></td>
+</tr>
+<tr class="row-odd"><td><p>2022-08-06T15:30:00Z</p></td>
+<td class="text-center"><p>—</p></td>
+<td class="text-center"><p>✓</p></td>
+<td class="text-center"><p>…</p></td>
+<td class="text-center"><p>✓</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<hr class="docutils" />
+<section id="step-3-create-the-netcdf-file-and-define-dimensions">
+<h2>Step 3: Create the NetCDF File and Define Dimensions<a class="headerlink" href="#step-3-create-the-netcdf-file-and-define-dimensions" title="Link to this heading">#</a></h2>
+<p>The file uses two dimensions: <code class="docutils literal notranslate"><span class="pre">time</span></code> and <code class="docutils literal notranslate"><span class="pre">depth</span></code>. Latitude and longitude are scalar (single-value) variables because the mooring is fixed in space — no station dimension is needed.</p>
+<div class="sd-tab-set docutils">
+<input checked="checked" id="sd-tab-item-8" name="sd-tab-set-4" type="radio">
+</input><label class="sd-tab-label" data-sync-id="r" for="sd-tab-item-8">
+R</label><div class="sd-tab-content docutils">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="n">depths</span><span class="w">  </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">c</span><span class="p">(</span><span class="m">328</span><span class="p">,</span><span class="w"> </span><span class="m">366</span><span class="p">,</span><span class="w"> </span><span class="m">416</span><span class="p">,</span><span class="w"> </span><span class="m">496</span><span class="p">,</span><span class="w"> </span><span class="m">616</span><span class="p">)</span><span class="w">   </span><span class="c1"># instrument depths (dbar)</span>
+<span class="n">lat_val</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="m">-80.65828</span>
+<span class="n">lon_val</span><span class="w"> </span><span class="o">&lt;-</span><span class="w">  </span><span class="m">174.4613</span>
+<span class="n">fill</span><span class="w">    </span><span class="o">&lt;-</span><span class="w"> </span><span class="kc">NaN</span>
+
+<span class="n">out_file</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="s">&quot;hwd2_ctd_detided.nc&quot;</span>
+<span class="n">ds</span><span class="w">       </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">create.nc</span><span class="p">(</span><span class="n">out_file</span><span class="p">,</span><span class="w"> </span><span class="n">format</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;netcdf4&quot;</span><span class="p">)</span>
+
+<span class="c1"># Time stored as seconds since the Unix epoch</span>
+<span class="n">origin</span><span class="w">    </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">as.POSIXct</span><span class="p">(</span><span class="s">&quot;1970-01-01 00:00:00&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">tz</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;UTC&quot;</span><span class="p">)</span>
+<span class="n">time_vals</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">as.numeric</span><span class="p">(</span><span class="nf">difftime</span><span class="p">(</span><span class="n">master_time</span><span class="p">,</span><span class="w"> </span><span class="n">origin</span><span class="p">,</span><span class="w"> </span><span class="n">units</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;secs&quot;</span><span class="p">))</span>
+
+<span class="nf">dim.def.nc</span><span class="p">(</span><span class="n">ds</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;time&quot;</span><span class="p">,</span><span class="w">  </span><span class="nf">length</span><span class="p">(</span><span class="n">time_vals</span><span class="p">))</span>
+<span class="nf">dim.def.nc</span><span class="p">(</span><span class="n">ds</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;depth&quot;</span><span class="p">,</span><span class="w"> </span><span class="nf">length</span><span class="p">(</span><span class="n">depths</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<input id="sd-tab-item-9" name="sd-tab-set-4" type="radio">
+</input><label class="sd-tab-label" data-sync-id="python" for="sd-tab-item-9">
+Python</label><div class="sd-tab-content docutils">
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">depths</span>  <span class="o">=</span> <span class="p">[</span><span class="mi">328</span><span class="p">,</span> <span class="mi">366</span><span class="p">,</span> <span class="mi">416</span><span class="p">,</span> <span class="mi">496</span><span class="p">,</span> <span class="mi">616</span><span class="p">]</span>   <span class="c1"># instrument depths (dbar)</span>
+<span class="n">lat_val</span> <span class="o">=</span> <span class="o">-</span><span class="mf">80.65828</span>
+<span class="n">lon_val</span> <span class="o">=</span>  <span class="mf">174.4613</span>
+<span class="n">fill</span>    <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">nan</span>
+
+<span class="n">out_file</span> <span class="o">=</span> <span class="s2">&quot;hwd2_ctd_detided.nc&quot;</span>
+<span class="n">ds</span> <span class="o">=</span> <span class="n">Dataset</span><span class="p">(</span><span class="n">out_file</span><span class="p">,</span> <span class="s2">&quot;w&quot;</span><span class="p">,</span> <span class="nb">format</span><span class="o">=</span><span class="s2">&quot;NETCDF4&quot;</span><span class="p">)</span>
+
+<span class="c1"># Time stored as seconds since the Unix epoch</span>
+<span class="n">origin</span>    <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">Timestamp</span><span class="p">(</span><span class="s2">&quot;1970-01-01&quot;</span><span class="p">,</span> <span class="n">tz</span><span class="o">=</span><span class="s2">&quot;UTC&quot;</span><span class="p">)</span>
+<span class="n">time_vals</span> <span class="o">=</span> <span class="p">(</span><span class="n">master_time</span> <span class="o">-</span> <span class="n">origin</span><span class="p">)</span><span class="o">.</span><span class="n">total_seconds</span><span class="p">()</span><span class="o">.</span><span class="n">values</span>
+
+<span class="n">ds</span><span class="o">.</span><span class="n">createDimension</span><span class="p">(</span><span class="s2">&quot;time&quot;</span><span class="p">,</span>  <span class="nb">len</span><span class="p">(</span><span class="n">time_vals</span><span class="p">))</span>
+<span class="n">ds</span><span class="o">.</span><span class="n">createDimension</span><span class="p">(</span><span class="s2">&quot;depth&quot;</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">depths</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<hr class="docutils" />
+<section id="step-4-coordinate-variables">
+<h2>Step 4: Coordinate Variables<a class="headerlink" href="#step-4-coordinate-variables" title="Link to this heading">#</a></h2>
+<p><a class="reference external" href="https://cfconventions.org/">CF-1.12</a> requires a coordinate variable (a 1-D variable sharing its dimension’s name) for each dimension. Latitude and longitude are defined without a dimension argument because they are scalar — one fixed position covers the entire dataset.</p>
+<div class="sd-tab-set docutils">
+<input checked="checked" id="sd-tab-item-10" name="sd-tab-set-5" type="radio">
+</input><label class="sd-tab-label" data-sync-id="r" for="sd-tab-item-10">
+R</label><div class="sd-tab-content docutils">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="c1"># --- time ---</span>
+<span class="nf">var.def.nc</span><span class="p">(</span><span class="n">ds</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;time&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;NC_DOUBLE&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;time&quot;</span><span class="p">)</span>
+<span class="nf">att.put.nc</span><span class="p">(</span><span class="n">ds</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;time&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;standard_name&quot;</span><span class="p">,</span><span class="w">         </span><span class="s">&quot;NC_CHAR&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;time&quot;</span><span class="p">)</span>
+<span class="nf">att.put.nc</span><span class="p">(</span><span class="n">ds</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;time&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;long_name&quot;</span><span class="p">,</span><span class="w">             </span><span class="s">&quot;NC_CHAR&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Time&quot;</span><span class="p">)</span>
+<span class="nf">att.put.nc</span><span class="p">(</span><span class="n">ds</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;time&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;units&quot;</span><span class="p">,</span><span class="w">                 </span><span class="s">&quot;NC_CHAR&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;seconds since 1970-01-01 00:00:00&quot;</span><span class="p">)</span>
+<span class="nf">att.put.nc</span><span class="p">(</span><span class="n">ds</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;time&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;calendar&quot;</span><span class="p">,</span><span class="w">              </span><span class="s">&quot;NC_CHAR&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;proleptic_gregorian&quot;</span><span class="p">)</span>
+<span class="nf">att.put.nc</span><span class="p">(</span><span class="n">ds</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;time&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;coverage_content_type&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;NC_CHAR&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;coordinate&quot;</span><span class="p">)</span>
+<span class="nf">var.put.nc</span><span class="p">(</span><span class="n">ds</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;time&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">time_vals</span><span class="p">)</span>
+
+<span class="c1"># --- depth ---</span>
+<span class="nf">var.def.nc</span><span class="p">(</span><span class="n">ds</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;depth&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;NC_DOUBLE&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;depth&quot;</span><span class="p">)</span>
+<span class="nf">att.put.nc</span><span class="p">(</span><span class="n">ds</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;depth&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;standard_name&quot;</span><span class="p">,</span><span class="w">         </span><span class="s">&quot;NC_CHAR&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;depth&quot;</span><span class="p">)</span>
+<span class="nf">att.put.nc</span><span class="p">(</span><span class="n">ds</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;depth&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;long_name&quot;</span><span class="p">,</span><span class="w">             </span><span class="s">&quot;NC_CHAR&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Depth of instrument below sea surface&quot;</span><span class="p">)</span>
+<span class="nf">att.put.nc</span><span class="p">(</span><span class="n">ds</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;depth&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;units&quot;</span><span class="p">,</span><span class="w">                 </span><span class="s">&quot;NC_CHAR&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;dbar&quot;</span><span class="p">)</span>
+<span class="nf">att.put.nc</span><span class="p">(</span><span class="n">ds</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;depth&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;positive&quot;</span><span class="p">,</span><span class="w">              </span><span class="s">&quot;NC_CHAR&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;down&quot;</span><span class="p">)</span>
+<span class="nf">att.put.nc</span><span class="p">(</span><span class="n">ds</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;depth&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;coverage_content_type&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;NC_CHAR&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;coordinate&quot;</span><span class="p">)</span>
+<span class="nf">var.put.nc</span><span class="p">(</span><span class="n">ds</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;depth&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">depths</span><span class="p">)</span>
+
+<span class="c1"># --- latitude (scalar) ---</span>
+<span class="nf">var.def.nc</span><span class="p">(</span><span class="n">ds</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;latitude&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;NC_DOUBLE&quot;</span><span class="p">,</span><span class="w"> </span><span class="kc">NA</span><span class="p">)</span>
+<span class="nf">att.put.nc</span><span class="p">(</span><span class="n">ds</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;latitude&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;standard_name&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;NC_CHAR&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;latitude&quot;</span><span class="p">)</span>
+<span class="nf">att.put.nc</span><span class="p">(</span><span class="n">ds</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;latitude&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;long_name&quot;</span><span class="p">,</span><span class="w">     </span><span class="s">&quot;NC_CHAR&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Latitude of mooring&quot;</span><span class="p">)</span>
+<span class="nf">att.put.nc</span><span class="p">(</span><span class="n">ds</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;latitude&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;units&quot;</span><span class="p">,</span><span class="w">         </span><span class="s">&quot;NC_CHAR&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;degrees_north&quot;</span><span class="p">)</span>
+<span class="nf">var.put.nc</span><span class="p">(</span><span class="n">ds</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;latitude&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">lat_val</span><span class="p">)</span>
+
+<span class="c1"># --- longitude (scalar) ---</span>
+<span class="nf">var.def.nc</span><span class="p">(</span><span class="n">ds</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;longitude&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;NC_DOUBLE&quot;</span><span class="p">,</span><span class="w"> </span><span class="kc">NA</span><span class="p">)</span>
+<span class="nf">att.put.nc</span><span class="p">(</span><span class="n">ds</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;longitude&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;standard_name&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;NC_CHAR&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;longitude&quot;</span><span class="p">)</span>
+<span class="nf">att.put.nc</span><span class="p">(</span><span class="n">ds</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;longitude&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;long_name&quot;</span><span class="p">,</span><span class="w">     </span><span class="s">&quot;NC_CHAR&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Longitude of mooring&quot;</span><span class="p">)</span>
+<span class="nf">att.put.nc</span><span class="p">(</span><span class="n">ds</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;longitude&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;units&quot;</span><span class="p">,</span><span class="w">         </span><span class="s">&quot;NC_CHAR&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;degrees_east&quot;</span><span class="p">)</span>
+<span class="nf">var.put.nc</span><span class="p">(</span><span class="n">ds</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;longitude&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">lon_val</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<input id="sd-tab-item-11" name="sd-tab-set-5" type="radio">
+</input><label class="sd-tab-label" data-sync-id="python" for="sd-tab-item-11">
+Python</label><div class="sd-tab-content docutils">
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># --- time ---</span>
+<span class="n">t_var</span> <span class="o">=</span> <span class="n">ds</span><span class="o">.</span><span class="n">createVariable</span><span class="p">(</span><span class="s2">&quot;time&quot;</span><span class="p">,</span> <span class="s2">&quot;f8&quot;</span><span class="p">,</span> <span class="p">(</span><span class="s2">&quot;time&quot;</span><span class="p">,))</span>
+<span class="n">t_var</span><span class="o">.</span><span class="n">standard_name</span>         <span class="o">=</span> <span class="s2">&quot;time&quot;</span>
+<span class="n">t_var</span><span class="o">.</span><span class="n">long_name</span>             <span class="o">=</span> <span class="s2">&quot;Time&quot;</span>
+<span class="n">t_var</span><span class="o">.</span><span class="n">units</span>                 <span class="o">=</span> <span class="s2">&quot;seconds since 1970-01-01 00:00:00&quot;</span>
+<span class="n">t_var</span><span class="o">.</span><span class="n">calendar</span>              <span class="o">=</span> <span class="s2">&quot;proleptic_gregorian&quot;</span>
+<span class="n">t_var</span><span class="o">.</span><span class="n">coverage_content_type</span> <span class="o">=</span> <span class="s2">&quot;coordinate&quot;</span>
+<span class="n">t_var</span><span class="p">[:]</span>                    <span class="o">=</span> <span class="n">time_vals</span>
+
+<span class="c1"># --- depth ---</span>
+<span class="n">d_var</span> <span class="o">=</span> <span class="n">ds</span><span class="o">.</span><span class="n">createVariable</span><span class="p">(</span><span class="s2">&quot;depth&quot;</span><span class="p">,</span> <span class="s2">&quot;f8&quot;</span><span class="p">,</span> <span class="p">(</span><span class="s2">&quot;depth&quot;</span><span class="p">,))</span>
+<span class="n">d_var</span><span class="o">.</span><span class="n">standard_name</span>         <span class="o">=</span> <span class="s2">&quot;depth&quot;</span>
+<span class="n">d_var</span><span class="o">.</span><span class="n">long_name</span>             <span class="o">=</span> <span class="s2">&quot;Depth of instrument below sea surface&quot;</span>
+<span class="n">d_var</span><span class="o">.</span><span class="n">units</span>                 <span class="o">=</span> <span class="s2">&quot;dbar&quot;</span>
+<span class="n">d_var</span><span class="o">.</span><span class="n">positive</span>              <span class="o">=</span> <span class="s2">&quot;down&quot;</span>
+<span class="n">d_var</span><span class="o">.</span><span class="n">coverage_content_type</span> <span class="o">=</span> <span class="s2">&quot;coordinate&quot;</span>
+<span class="n">d_var</span><span class="p">[:]</span>                    <span class="o">=</span> <span class="n">depths</span>
+
+<span class="c1"># --- latitude (scalar) ---</span>
+<span class="n">lat_var</span> <span class="o">=</span> <span class="n">ds</span><span class="o">.</span><span class="n">createVariable</span><span class="p">(</span><span class="s2">&quot;latitude&quot;</span><span class="p">,</span> <span class="s2">&quot;f8&quot;</span><span class="p">)</span>
+<span class="n">lat_var</span><span class="o">.</span><span class="n">standard_name</span> <span class="o">=</span> <span class="s2">&quot;latitude&quot;</span>
+<span class="n">lat_var</span><span class="o">.</span><span class="n">long_name</span>     <span class="o">=</span> <span class="s2">&quot;Latitude of mooring&quot;</span>
+<span class="n">lat_var</span><span class="o">.</span><span class="n">units</span>         <span class="o">=</span> <span class="s2">&quot;degrees_north&quot;</span>
+<span class="n">lat_var</span><span class="p">[:]</span>            <span class="o">=</span> <span class="n">lat_val</span>
+
+<span class="c1"># --- longitude (scalar) ---</span>
+<span class="n">lon_var</span> <span class="o">=</span> <span class="n">ds</span><span class="o">.</span><span class="n">createVariable</span><span class="p">(</span><span class="s2">&quot;longitude&quot;</span><span class="p">,</span> <span class="s2">&quot;f8&quot;</span><span class="p">)</span>
+<span class="n">lon_var</span><span class="o">.</span><span class="n">standard_name</span> <span class="o">=</span> <span class="s2">&quot;longitude&quot;</span>
+<span class="n">lon_var</span><span class="o">.</span><span class="n">long_name</span>     <span class="o">=</span> <span class="s2">&quot;Longitude of mooring&quot;</span>
+<span class="n">lon_var</span><span class="o">.</span><span class="n">units</span>         <span class="o">=</span> <span class="s2">&quot;degrees_east&quot;</span>
+<span class="n">lon_var</span><span class="p">[:]</span>            <span class="o">=</span> <span class="n">lon_val</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<hr class="docutils" />
+<section id="step-5-fill-data-arrays">
+<h2>Step 5: Fill Data Arrays<a class="headerlink" href="#step-5-fill-data-arrays" title="Link to this heading">#</a></h2>
+<p>For each physical variable, a <code class="docutils literal notranslate"><span class="pre">(time</span> <span class="pre">×</span> <span class="pre">depth)</span></code> array of <code class="docutils literal notranslate"><span class="pre">NaN</span></code> is created and filled by looping over depth files. <code class="docutils literal notranslate"><span class="pre">match()</span></code> / <code class="docutils literal notranslate"><span class="pre">get_indexer()</span></code> maps each file’s timestamps onto the master time axis — this ensures observations land in the correct time step even when files have different lengths. Any slot with no observation (i.e. where a sensor stopped early) remains as the <code class="docutils literal notranslate"><span class="pre">_FillValue</span></code>. The snippet below shows pressure; salinity and temperature follow the same pattern.</p>
+<div class="sd-tab-set docutils">
+<input checked="checked" id="sd-tab-item-12" name="sd-tab-set-6" type="radio">
+</input><label class="sd-tab-label" data-sync-id="r" for="sd-tab-item-12">
+R</label><div class="sd-tab-content docutils">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="n">arr_pressure</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">array</span><span class="p">(</span>
+<span class="w">  </span><span class="kc">NA_real_</span><span class="p">,</span>
+<span class="w">  </span><span class="n">dim</span><span class="w">      </span><span class="o">=</span><span class="w"> </span><span class="nf">c</span><span class="p">(</span><span class="nf">length</span><span class="p">(</span><span class="n">master_time</span><span class="p">),</span><span class="w"> </span><span class="nf">length</span><span class="p">(</span><span class="n">depths</span><span class="p">)),</span>
+<span class="w">  </span><span class="n">dimnames</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">list</span><span class="p">(</span><span class="kc">NULL</span><span class="p">,</span><span class="w"> </span><span class="nf">as.character</span><span class="p">(</span><span class="n">depths</span><span class="p">))</span>
+<span class="p">)</span>
+
+<span class="nf">for </span><span class="p">(</span><span class="n">j</span><span class="w"> </span><span class="n">in</span><span class="w"> </span><span class="nf">seq_along</span><span class="p">(</span><span class="n">depths</span><span class="p">))</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="n">df</span><span class="w">  </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">ds_notides</span><span class="p">[[</span><span class="n">j</span><span class="p">]]</span>
+<span class="w">  </span><span class="n">t_j</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">as.POSIXct</span><span class="p">(</span><span class="n">df</span><span class="p">[[</span><span class="s">&quot;time&quot;</span><span class="p">]],</span><span class="w"> </span><span class="n">tz</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;UTC&quot;</span><span class="p">)</span>
+<span class="w">  </span><span class="n">idx</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">match</span><span class="p">(</span><span class="n">t_j</span><span class="p">,</span><span class="w"> </span><span class="n">master_time</span><span class="p">)</span>
+<span class="w">  </span><span class="n">arr_pressure</span><span class="p">[</span><span class="n">idx</span><span class="p">,</span><span class="w"> </span><span class="n">j</span><span class="p">]</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">df</span><span class="p">[[</span><span class="s">&quot;sea_water_pressure (dbar)&quot;</span><span class="p">]]</span>
+<span class="p">}</span>
+
+<span class="n">arr_pressure</span><span class="p">[</span><span class="nf">is.na</span><span class="p">(</span><span class="n">arr_pressure</span><span class="p">)]</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">fill</span>
+
+<span class="nf">var.def.nc</span><span class="p">(</span><span class="n">ds</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;sea_water_pressure&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;NC_DOUBLE&quot;</span><span class="p">,</span><span class="w"> </span><span class="nf">c</span><span class="p">(</span><span class="s">&quot;time&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;depth&quot;</span><span class="p">))</span>
+<span class="nf">att.put.nc</span><span class="p">(</span><span class="n">ds</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;sea_water_pressure&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;standard_name&quot;</span><span class="p">,</span><span class="w">         </span><span class="s">&quot;NC_CHAR&quot;</span><span class="p">,</span><span class="w">   </span><span class="s">&quot;sea_water_pressure&quot;</span><span class="p">)</span>
+<span class="nf">att.put.nc</span><span class="p">(</span><span class="n">ds</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;sea_water_pressure&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;long_name&quot;</span><span class="p">,</span><span class="w">             </span><span class="s">&quot;NC_CHAR&quot;</span><span class="p">,</span><span class="w">   </span><span class="s">&quot;Pressure of sea water&quot;</span><span class="p">)</span>
+<span class="nf">att.put.nc</span><span class="p">(</span><span class="n">ds</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;sea_water_pressure&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;units&quot;</span><span class="p">,</span><span class="w">                 </span><span class="s">&quot;NC_CHAR&quot;</span><span class="p">,</span><span class="w">   </span><span class="s">&quot;dbar&quot;</span><span class="p">)</span>
+<span class="nf">att.put.nc</span><span class="p">(</span><span class="n">ds</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;sea_water_pressure&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;coverage_content_type&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;NC_CHAR&quot;</span><span class="p">,</span><span class="w">   </span><span class="s">&quot;physicalMeasurement&quot;</span><span class="p">)</span>
+<span class="nf">att.put.nc</span><span class="p">(</span><span class="n">ds</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;sea_water_pressure&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;_FillValue&quot;</span><span class="p">,</span><span class="w">            </span><span class="s">&quot;NC_DOUBLE&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">fill</span><span class="p">)</span>
+<span class="nf">att.put.nc</span><span class="p">(</span><span class="n">ds</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;sea_water_pressure&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;coordinates&quot;</span><span class="p">,</span><span class="w">           </span><span class="s">&quot;NC_CHAR&quot;</span><span class="p">,</span><span class="w">   </span><span class="s">&quot;latitude longitude&quot;</span><span class="p">)</span>
+<span class="nf">att.put.nc</span><span class="p">(</span><span class="n">ds</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;sea_water_pressure&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;comment&quot;</span><span class="p">,</span><span class="w">               </span><span class="s">&quot;NC_CHAR&quot;</span><span class="p">,</span><span class="w">   </span><span class="s">&quot;Quality-controlled with tidal cycles removed.&quot;</span><span class="p">)</span>
+<span class="nf">var.put.nc</span><span class="p">(</span><span class="n">ds</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;sea_water_pressure&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">arr_pressure</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<input id="sd-tab-item-13" name="sd-tab-set-6" type="radio">
+</input><label class="sd-tab-label" data-sync-id="python" for="sd-tab-item-13">
+Python</label><div class="sd-tab-content docutils">
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">arr_pressure</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">full</span><span class="p">((</span><span class="nb">len</span><span class="p">(</span><span class="n">master_time</span><span class="p">),</span> <span class="nb">len</span><span class="p">(</span><span class="n">depths</span><span class="p">)),</span> <span class="n">fill</span><span class="p">)</span>
+<span class="k">for</span> <span class="n">j</span><span class="p">,</span> <span class="n">df</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">ds_notides</span><span class="o">.</span><span class="n">values</span><span class="p">()):</span>
+    <span class="n">t_j</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DatetimeIndex</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s2">&quot;time&quot;</span><span class="p">])</span><span class="o">.</span><span class="n">tz_localize</span><span class="p">(</span><span class="s2">&quot;UTC&quot;</span><span class="p">)</span>
+    <span class="n">idx</span> <span class="o">=</span> <span class="n">master_time</span><span class="o">.</span><span class="n">get_indexer</span><span class="p">(</span><span class="n">t_j</span><span class="p">)</span>
+    <span class="n">valid</span> <span class="o">=</span> <span class="n">idx</span> <span class="o">&gt;=</span> <span class="mi">0</span>
+    <span class="n">arr_pressure</span><span class="p">[</span><span class="n">idx</span><span class="p">[</span><span class="n">valid</span><span class="p">],</span> <span class="n">j</span><span class="p">]</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s2">&quot;sea_water_pressure (dbar)&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">values</span><span class="p">[</span><span class="n">valid</span><span class="p">]</span>
+
+<span class="n">v</span> <span class="o">=</span> <span class="n">ds</span><span class="o">.</span><span class="n">createVariable</span><span class="p">(</span><span class="s2">&quot;sea_water_pressure&quot;</span><span class="p">,</span> <span class="s2">&quot;f8&quot;</span><span class="p">,</span> <span class="p">(</span><span class="s2">&quot;time&quot;</span><span class="p">,</span> <span class="s2">&quot;depth&quot;</span><span class="p">),</span> <span class="n">fill_value</span><span class="o">=</span><span class="n">fill</span><span class="p">)</span>
+<span class="n">v</span><span class="o">.</span><span class="n">standard_name</span>         <span class="o">=</span> <span class="s2">&quot;sea_water_pressure&quot;</span>
+<span class="n">v</span><span class="o">.</span><span class="n">long_name</span>             <span class="o">=</span> <span class="s2">&quot;Pressure of sea water&quot;</span>
+<span class="n">v</span><span class="o">.</span><span class="n">units</span>                 <span class="o">=</span> <span class="s2">&quot;dbar&quot;</span>
+<span class="n">v</span><span class="o">.</span><span class="n">coverage_content_type</span> <span class="o">=</span> <span class="s2">&quot;physicalMeasurement&quot;</span>
+<span class="n">v</span><span class="o">.</span><span class="n">coordinates</span>           <span class="o">=</span> <span class="s2">&quot;latitude longitude&quot;</span>
+<span class="n">v</span><span class="o">.</span><span class="n">comment</span>               <span class="o">=</span> <span class="s2">&quot;Quality-controlled with tidal cycles removed.&quot;</span>
+<span class="n">v</span><span class="p">[:]</span>                    <span class="o">=</span> <span class="n">arr_pressure</span>
+</pre></div>
+</div>
+</div>
+</div>
+<img alt="NetCDF data cube showing the time × depth array structure for hwd2_ctd_detided.nc" class="align-center" src="_images/netcdf_structure.png" />
+</section>
+<hr class="docutils" />
+<section id="step-6-global-attributes-and-close">
+<h2>Step 6: Global Attributes and Close<a class="headerlink" href="#step-6-global-attributes-and-close" title="Link to this heading">#</a></h2>
+<p>CF-1.12 requires a set of global attributes describing the dataset as a whole. These are what catalogue systems and tools like Panoply or xarray read to understand and cite the file.</p>
+<div class="sd-tab-set docutils">
+<input checked="checked" id="sd-tab-item-14" name="sd-tab-set-7" type="radio">
+</input><label class="sd-tab-label" data-sync-id="r" for="sd-tab-item-14">
+R</label><div class="sd-tab-content docutils">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="nf">att.put.nc</span><span class="p">(</span><span class="n">ds</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;NC_GLOBAL&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Conventions&quot;</span><span class="p">,</span><span class="w">         </span><span class="s">&quot;NC_CHAR&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;CF-1.12&quot;</span><span class="p">)</span>
+<span class="nf">att.put.nc</span><span class="p">(</span><span class="n">ds</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;NC_GLOBAL&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;featureType&quot;</span><span class="p">,</span><span class="w">         </span><span class="s">&quot;NC_CHAR&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;timeSeries&quot;</span><span class="p">)</span>
+<span class="nf">att.put.nc</span><span class="p">(</span><span class="n">ds</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;NC_GLOBAL&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;title&quot;</span><span class="p">,</span><span class="w">               </span><span class="s">&quot;NC_CHAR&quot;</span><span class="p">,</span>
+<span class="w">           </span><span class="s">&quot;Central Ross Ice Shelf Cavity Moored Observations (CTD, detided) 2018-2022&quot;</span><span class="p">)</span>
+<span class="nf">att.put.nc</span><span class="p">(</span><span class="n">ds</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;NC_GLOBAL&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;summary&quot;</span><span class="p">,</span><span class="w">             </span><span class="s">&quot;NC_CHAR&quot;</span><span class="p">,</span><span class="w"> </span><span class="nf">paste</span><span class="p">(</span>
+<span class="w">  </span><span class="s">&quot;Detided timeseries from moored oceanographic instruments at the HWD2 borehole&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="s">&quot;beneath the central Ross Ice Shelf. Tidal cycles have been removed.&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="s">&quot;These data support studies of under-ice shelf circulation and ice-ocean interactions.&quot;</span>
+<span class="p">))</span>
+<span class="nf">att.put.nc</span><span class="p">(</span><span class="n">ds</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;NC_GLOBAL&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;creator_type&quot;</span><span class="p">,</span><span class="w">        </span><span class="s">&quot;NC_CHAR&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;person&quot;</span><span class="p">)</span>
+<span class="nf">att.put.nc</span><span class="p">(</span><span class="n">ds</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;NC_GLOBAL&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;creator_name&quot;</span><span class="p">,</span><span class="w">        </span><span class="s">&quot;NC_CHAR&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Yingpu Xiahou&quot;</span><span class="p">)</span>
+<span class="nf">att.put.nc</span><span class="p">(</span><span class="n">ds</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;NC_GLOBAL&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;creator_email&quot;</span><span class="p">,</span><span class="w">       </span><span class="s">&quot;NC_CHAR&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;xiahouli@outlook.com&quot;</span><span class="p">)</span>
+<span class="nf">att.put.nc</span><span class="p">(</span><span class="n">ds</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;NC_GLOBAL&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;creator_institution&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;NC_CHAR&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Earth Sciences New Zealand&quot;</span><span class="p">)</span>
+<span class="nf">att.put.nc</span><span class="p">(</span><span class="n">ds</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;NC_GLOBAL&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;creator_url&quot;</span><span class="p">,</span><span class="w">         </span><span class="s">&quot;NC_CHAR&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;https://orcid.org/0000-0003-1279-0014&quot;</span><span class="p">)</span>
+<span class="nf">att.put.nc</span><span class="p">(</span><span class="n">ds</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;NC_GLOBAL&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;time_coverage_start&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;NC_CHAR&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;2018-01-06T00:00:00Z&quot;</span><span class="p">)</span>
+<span class="nf">att.put.nc</span><span class="p">(</span><span class="n">ds</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;NC_GLOBAL&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;time_coverage_end&quot;</span><span class="p">,</span><span class="w">   </span><span class="s">&quot;NC_CHAR&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;2022-08-06T15:30:00Z&quot;</span><span class="p">)</span>
+<span class="nf">att.put.nc</span><span class="p">(</span><span class="n">ds</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;NC_GLOBAL&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;geospatial_lat_min&quot;</span><span class="p">,</span><span class="w">  </span><span class="s">&quot;NC_DOUBLE&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">lat_val</span><span class="p">)</span>
+<span class="nf">att.put.nc</span><span class="p">(</span><span class="n">ds</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;NC_GLOBAL&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;geospatial_lat_max&quot;</span><span class="p">,</span><span class="w">  </span><span class="s">&quot;NC_DOUBLE&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">lat_val</span><span class="p">)</span>
+<span class="nf">att.put.nc</span><span class="p">(</span><span class="n">ds</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;NC_GLOBAL&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;geospatial_lon_min&quot;</span><span class="p">,</span><span class="w">  </span><span class="s">&quot;NC_DOUBLE&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">lon_val</span><span class="p">)</span>
+<span class="nf">att.put.nc</span><span class="p">(</span><span class="n">ds</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;NC_GLOBAL&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;geospatial_lon_max&quot;</span><span class="p">,</span><span class="w">  </span><span class="s">&quot;NC_DOUBLE&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">lon_val</span><span class="p">)</span>
+<span class="nf">att.put.nc</span><span class="p">(</span><span class="n">ds</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;NC_GLOBAL&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;metadata_link&quot;</span><span class="p">,</span><span class="w">       </span><span class="s">&quot;NC_CHAR&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;https://www.seanoe.org/data/00973/108458&quot;</span><span class="p">)</span>
+<span class="nf">att.put.nc</span><span class="p">(</span><span class="n">ds</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;NC_GLOBAL&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;publisher_name&quot;</span><span class="p">,</span><span class="w">      </span><span class="s">&quot;NC_CHAR&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;SEANOE&quot;</span><span class="p">)</span>
+<span class="nf">att.put.nc</span><span class="p">(</span><span class="n">ds</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;NC_GLOBAL&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;publisher_url&quot;</span><span class="p">,</span><span class="w">       </span><span class="s">&quot;NC_CHAR&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;https://www.seanoe.org/&quot;</span><span class="p">)</span>
+<span class="nf">att.put.nc</span><span class="p">(</span><span class="n">ds</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;NC_GLOBAL&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;license&quot;</span><span class="p">,</span><span class="w">             </span><span class="s">&quot;NC_CHAR&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;https://creativecommons.org/licenses/by/4.0/&quot;</span><span class="p">)</span>
+<span class="nf">att.put.nc</span><span class="p">(</span><span class="n">ds</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;NC_GLOBAL&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;comment&quot;</span><span class="p">,</span><span class="w">             </span><span class="s">&quot;NC_CHAR&quot;</span><span class="p">,</span>
+<span class="w">           </span><span class="s">&quot;All variables contain quality-controlled detided timeseries (tidal cycles removed). Variable names follow CF standard names without modification.&quot;</span><span class="p">)</span>
+
+<span class="nf">print.nc</span><span class="p">(</span><span class="n">ds</span><span class="p">)</span>
+<span class="nf">close.nc</span><span class="p">(</span><span class="n">ds</span><span class="p">)</span>
+<span class="nf">cat</span><span class="p">(</span><span class="s">&quot;Wrote:&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">out_file</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;\n&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<input id="sd-tab-item-15" name="sd-tab-set-7" type="radio">
+</input><label class="sd-tab-label" data-sync-id="python" for="sd-tab-item-15">
+Python</label><div class="sd-tab-content docutils">
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">ds</span><span class="o">.</span><span class="n">Conventions</span>         <span class="o">=</span> <span class="s2">&quot;CF-1.12&quot;</span>
+<span class="n">ds</span><span class="o">.</span><span class="n">featureType</span>         <span class="o">=</span> <span class="s2">&quot;timeSeries&quot;</span>
+<span class="n">ds</span><span class="o">.</span><span class="n">title</span>               <span class="o">=</span> <span class="s2">&quot;Central Ross Ice Shelf Cavity Moored Observations (CTD, detided) 2018-2022&quot;</span>
+<span class="n">ds</span><span class="o">.</span><span class="n">summary</span>             <span class="o">=</span> <span class="p">(</span><span class="s2">&quot;Detided timeseries from moored oceanographic instruments &quot;</span>
+                          <span class="s2">&quot;at the HWD2 borehole beneath the central Ross Ice Shelf. &quot;</span>
+                          <span class="s2">&quot;Tidal cycles have been removed.&quot;</span><span class="p">)</span>
+<span class="n">ds</span><span class="o">.</span><span class="n">creator_type</span>        <span class="o">=</span> <span class="s2">&quot;person&quot;</span>
+<span class="n">ds</span><span class="o">.</span><span class="n">creator_name</span>        <span class="o">=</span> <span class="s2">&quot;Yingpu Xiahou&quot;</span>
+<span class="n">ds</span><span class="o">.</span><span class="n">creator_email</span>       <span class="o">=</span> <span class="s2">&quot;xiahouli@outlook.com&quot;</span>
+<span class="n">ds</span><span class="o">.</span><span class="n">creator_institution</span> <span class="o">=</span> <span class="s2">&quot;Earth Sciences New Zealand&quot;</span>
+<span class="n">ds</span><span class="o">.</span><span class="n">creator_url</span>         <span class="o">=</span> <span class="s2">&quot;https://orcid.org/0000-0003-1279-0014&quot;</span>
+<span class="n">ds</span><span class="o">.</span><span class="n">time_coverage_start</span> <span class="o">=</span> <span class="s2">&quot;2018-01-06T00:00:00Z&quot;</span>
+<span class="n">ds</span><span class="o">.</span><span class="n">time_coverage_end</span>   <span class="o">=</span> <span class="s2">&quot;2022-08-06T15:30:00Z&quot;</span>
+<span class="n">ds</span><span class="o">.</span><span class="n">geospatial_lat_min</span>  <span class="o">=</span> <span class="n">lat_val</span>
+<span class="n">ds</span><span class="o">.</span><span class="n">geospatial_lat_max</span>  <span class="o">=</span> <span class="n">lat_val</span>
+<span class="n">ds</span><span class="o">.</span><span class="n">geospatial_lon_min</span>  <span class="o">=</span> <span class="n">lon_val</span>
+<span class="n">ds</span><span class="o">.</span><span class="n">geospatial_lon_max</span>  <span class="o">=</span> <span class="n">lon_val</span>
+<span class="n">ds</span><span class="o">.</span><span class="n">metadata_link</span>       <span class="o">=</span> <span class="s2">&quot;https://www.seanoe.org/data/00973/108458&quot;</span>
+<span class="n">ds</span><span class="o">.</span><span class="n">publisher_name</span>      <span class="o">=</span> <span class="s2">&quot;SEANOE&quot;</span>
+<span class="n">ds</span><span class="o">.</span><span class="n">publisher_url</span>       <span class="o">=</span> <span class="s2">&quot;https://www.seanoe.org/&quot;</span>
+<span class="n">ds</span><span class="o">.</span><span class="n">license</span>             <span class="o">=</span> <span class="s2">&quot;https://creativecommons.org/licenses/by/4.0/&quot;</span>
+<span class="n">ds</span><span class="o">.</span><span class="n">comment</span>             <span class="o">=</span> <span class="p">(</span><span class="s2">&quot;All variables contain quality-controlled detided timeseries &quot;</span>
+                          <span class="s2">&quot;(tidal cycles removed). Variable names follow CF standard names &quot;</span>
+                          <span class="s2">&quot;without modification.&quot;</span><span class="p">)</span>
+
+<span class="n">ds</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Wrote: </span><span class="si">{</span><span class="n">out_file</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<hr class="docutils" />
+<section id="the-result">
+<h2>The Result<a class="headerlink" href="#the-result" title="Link to this heading">#</a></h2>
+<p>The finished file is self-describing: every variable carries enough attribute information that a researcher — or a machine — can understand and correctly use the data without consulting any external documentation.</p>
+<p>Each physical variable includes:</p>
+<ul class="simple">
+<li><p><strong><code class="docutils literal notranslate"><span class="pre">standard_name</span></code></strong> — a term from the <a class="reference external" href="https://cfconventions.org/Data/cf-standard-names/current/build/cf-standard-name-table.html">CF standard name table</a>, providing a machine-readable, unambiguous identity for the parameter</p></li>
+<li><p><strong><code class="docutils literal notranslate"><span class="pre">long_name</span></code></strong> — a plain-language description for human readers</p></li>
+<li><p><strong><code class="docutils literal notranslate"><span class="pre">units</span></code></strong> — in CF-canonical form, removing any ambiguity about scale or convention</p></li>
+<li><p><strong><code class="docutils literal notranslate"><span class="pre">_FillValue</span> <span class="pre">=</span> <span class="pre">NaN</span></code></strong> — a declared sentinel so any CF-aware tool can distinguish a genuine zero from a missing observation (e.g. where an instrument stopped early)</p></li>
+<li><p><strong><code class="docutils literal notranslate"><span class="pre">coordinates</span> <span class="pre">=</span> <span class="pre">&quot;latitude</span> <span class="pre">longitude&quot;</span></code></strong> — links each data array to the mooring’s fixed position</p></li>
+</ul>
+<p>The global attributes carry the dataset-level context that makes the data <a class="reference internal" href="fair_data.html"><span class="std std-doc">FAIR</span></a>:</p>
+<ul class="simple">
+<li><p><strong>Findable</strong>: <code class="docutils literal notranslate"><span class="pre">title</span></code>, <code class="docutils literal notranslate"><span class="pre">summary</span></code>, and <code class="docutils literal notranslate"><span class="pre">metadata_link</span></code> give catalogue systems and search engines enough information to surface and describe the dataset</p></li>
+<li><p><strong>Accessible</strong>: <code class="docutils literal notranslate"><span class="pre">license</span></code> (CC BY 4.0) and <code class="docutils literal notranslate"><span class="pre">publisher_url</span></code> tell users exactly how and where to obtain the data</p></li>
+<li><p><strong>Interoperable</strong>: <code class="docutils literal notranslate"><span class="pre">Conventions</span> <span class="pre">=</span> <span class="pre">&quot;CF-1.12&quot;</span></code> declares the standard; CF-aware tools (Panoply, xarray, MATLAB, Ferret) can read, plot, and compare the file without any bespoke parsing</p></li>
+<li><p><strong>Reusable</strong>: <code class="docutils literal notranslate"><span class="pre">creator_name</span></code>, <code class="docutils literal notranslate"><span class="pre">creator_email</span></code>, <code class="docutils literal notranslate"><span class="pre">creator_institution</span></code>, and <code class="docutils literal notranslate"><span class="pre">creator_url</span></code> (ORCID) ensure correct attribution; <code class="docutils literal notranslate"><span class="pre">comment</span></code> records the key processing step so future users understand the data’s provenance</p></li>
+</ul>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>netcdf hwd2_ctd_detided {
+dimensions:
+        time = 80336 ;
+        depth = 5 ;
+variables:
+        double time(time) ;
+                time:standard_name = &quot;time&quot; ;
+                time:long_name = &quot;Time&quot; ;
+                time:units = &quot;seconds since 1970-01-01 00:00:00&quot; ;
+                time:calendar = &quot;proleptic_gregorian&quot; ;
+                time:coverage_content_type = &quot;coordinate&quot; ;
+        double depth(depth) ;
+                depth:standard_name = &quot;depth&quot; ;
+                depth:long_name = &quot;Depth of instrument below sea surface&quot; ;
+                depth:units = &quot;dbar&quot; ;
+                depth:positive = &quot;down&quot; ;
+                depth:coverage_content_type = &quot;coordinate&quot; ;
+        double latitude ;
+                latitude:standard_name = &quot;latitude&quot; ;
+                latitude:long_name = &quot;Latitude of mooring&quot; ;
+                latitude:units = &quot;degrees_north&quot; ;
+        double longitude ;
+                longitude:standard_name = &quot;longitude&quot; ;
+                longitude:long_name = &quot;Longitude of mooring&quot; ;
+                longitude:units = &quot;degrees_east&quot; ;
+        double sea_water_pressure(depth, time) ;
+                sea_water_pressure:standard_name = &quot;sea_water_pressure&quot; ;
+                sea_water_pressure:long_name = &quot;Pressure of sea water&quot; ;
+                sea_water_pressure:units = &quot;dbar&quot; ;
+                sea_water_pressure:coverage_content_type = &quot;physicalMeasurement&quot; ;
+                sea_water_pressure:_FillValue = NaN ;
+                sea_water_pressure:coordinates = &quot;latitude longitude&quot; ;
+                sea_water_pressure:comment = &quot;Quality-controlled with tidal cycles removed.&quot; ;
+        double sea_water_absolute_salinity(depth, time) ;
+                sea_water_absolute_salinity:standard_name = &quot;sea_water_absolute_salinity&quot; ;
+                sea_water_absolute_salinity:long_name = &quot;Absolute salinity of sea water&quot; ;
+                sea_water_absolute_salinity:units = &quot;g kg-1&quot; ;
+                sea_water_absolute_salinity:coverage_content_type = &quot;physicalMeasurement&quot; ;
+                sea_water_absolute_salinity:_FillValue = NaN ;
+                sea_water_absolute_salinity:coordinates = &quot;latitude longitude&quot; ;
+                sea_water_absolute_salinity:comment = &quot;Quality-controlled with tidal cycles removed.&quot; ;
+        double sea_water_conservative_temperature(depth, time) ;
+                sea_water_conservative_temperature:standard_name = &quot;sea_water_conservative_temperature&quot; ;
+                sea_water_conservative_temperature:long_name = &quot;Conservative temperature of sea water&quot; ;
+                sea_water_conservative_temperature:units = &quot;degree_C&quot; ;
+                sea_water_conservative_temperature:coverage_content_type = &quot;physicalMeasurement&quot; ;
+                sea_water_conservative_temperature:_FillValue = NaN ;
+                sea_water_conservative_temperature:coordinates = &quot;latitude longitude&quot; ;
+                sea_water_conservative_temperature:comment = &quot;Quality-controlled with tidal cycles removed.&quot; ;
+
+// global attributes:
+                :Conventions = &quot;CF-1.12&quot; ;
+                :featureType = &quot;timeSeries&quot; ;
+                :title = &quot;Central Ross Ice Shelf Cavity Moored Observations (CTD, detided) 2018-2022&quot; ;
+                :summary = &quot;Detided timeseries from moored oceanographic instruments at the HWD2 borehole
+                            beneath the central Ross Ice Shelf. Tidal cycles have been removed.&quot; ;
+                :creator_type = &quot;person&quot; ;
+                :creator_name = &quot;Yingpu Xiahou&quot; ;
+                :creator_email = &quot;xiahouli@outlook.com&quot; ;
+                :creator_institution = &quot;Earth Sciences New Zealand&quot; ;
+                :creator_url = &quot;https://orcid.org/0000-0003-1279-0014&quot; ;
+                :time_coverage_start = &quot;2018-01-06T00:00:00Z&quot; ;
+                :time_coverage_end = &quot;2022-08-06T15:30:00Z&quot; ;
+                :geospatial_lat_min = -80.65828 ;
+                :geospatial_lat_max = -80.65828 ;
+                :geospatial_lon_min = 174.4613 ;
+                :geospatial_lon_max = 174.4613 ;
+                :metadata_link = &quot;https://www.seanoe.org/data/00973/108458&quot; ;
+                :publisher_name = &quot;SEANOE&quot; ;
+                :publisher_url = &quot;https://www.seanoe.org/&quot; ;
+                :license = &quot;https://creativecommons.org/licenses/by/4.0/&quot; ;
+                :comment = &quot;All variables contain quality-controlled detided timeseries.
+                            Variable names follow CF standard names without modification.&quot; ;
+}
+</pre></div>
+</div>
+<p><strong>Download output file</strong><br>
+<a class="reference download internal" download="" href="_downloads/926895365a242f842413193a1fc45530/hwd2_ctd_detided.nc"><code class="xref download docutils literal notranslate"><span class="pre">hwd2_ctd_detided.nc</span></code></a></p>
+<div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<p><a class="reference external" href="https://www.youtube.com/watch?v=ozhpQofa_g4">Convert Data to NetCDF with R</a><br>
+<a class="reference external" href="https://www.youtube.com/playlist?list=PLpykv05eUR0rAuaLnybkZORnCwyND4CV4">Convert Data to NetCDF with Python</a></p>
+</div>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="ssfc_tutorial.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Tabular Data</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="darwin_core.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Darwin Core</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#input-data">Input Data</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-1-read-all-depth-files">Step 1: Read All Depth Files</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-2-build-the-master-time-grid">Step 2: Build the Master Time Grid</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-3-create-the-netcdf-file-and-define-dimensions">Step 3: Create the NetCDF File and Define Dimensions</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-4-coordinate-variables">Step 4: Coordinate Variables</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-5-fill-data-arrays">Step 5: Fill Data Arrays</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-6-global-attributes-and-close">Step 6: Global Attributes and Close</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-result">The Result</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Mike Meredyth-Young
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae"></script>
+<script src="_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>
