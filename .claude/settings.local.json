@@ -1,0 +1,18 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(grep -E \"\\\\.nc$|ctd\")",
+      "Bash(python *)",
+      "Bash(ncdump *)",
+      "WebSearch",
+      "WebFetch(domain:docs.geonetwork-opensource.org)",
+      "WebFetch(domain:github.com)",
+      "Bash(curl *)",
+      "Bash(git ls-tree *)",
+      "Bash(git add *)",
+      "Bash(git rm *)",
+      "Bash(git commit -m ' *)",
+      "Bash(git push *)"
+    ]
+  }
+}
