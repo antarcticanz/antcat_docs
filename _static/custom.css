@@ -1,0 +1,311 @@
+/* =============================================================
+   Antarctic Metadata Catalogue – Custom Theme
+   Polar palette: deep navy, glacier blue, ice frost
+   ============================================================= */
+
+/* ----- Colour tokens ----- */
+:root {
+  --antcat-navy:        #0d2b45;
+  --antcat-blue:        #1e78b4;
+  --antcat-blue-hover:  #155d8a;
+  --antcat-frost:       #edf5fb;
+  --antcat-ice:         #d4eaf5;
+  --antcat-border:      #b0d0e4;
+  --antcat-muted:       #4a6070;
+
+  /* PyData Sphinx Theme overrides */
+  --pst-color-primary:       #1e78b4;
+  --pst-color-link:          #1e78b4;
+  --pst-color-link-hover:    #0d2b45;
+  --pst-color-secondary:     #0d2b45;
+  --pst-color-accent:        #3498d8;
+
+  /* Sphinx-design overrides (if used) */
+  --sd-color-primary:        #1e78b4;
+  --sd-color-primary-text:   #ffffff;
+  --sd-color-secondary:      #0d2b45;
+  --sd-color-secondary-text: #ffffff;
+}
+
+/* ----- Top navigation bar ----- */
+.bd-header,
+.navbar {
+  background-color: var(--antcat-navy) !important;
+  border-bottom: 2px solid var(--antcat-blue);
+}
+
+.navbar-brand,
+.navbar-brand:hover,
+.navbar .nav-link,
+.navbar-nav .nav-link {
+  color: #ffffff !important;
+}
+
+/* ----- Left sidebar ----- */
+.bd-sidebar-primary {
+  border-right: 1px solid var(--antcat-border);
+}
+
+/* Sidebar section headings */
+.bd-sidebar-primary .sidebar-primary-item .caption-text {
+  color: var(--antcat-navy);
+  font-weight: 700;
+  font-size: 0.75em;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+/* Active / current nav item */
+.bd-sidebar-primary .current > a,
+.bd-sidebar-primary .current > a:hover {
+  color: var(--antcat-navy) !important;
+  font-weight: 600;
+  border-left: 3px solid var(--antcat-blue);
+  padding-left: 6px;
+  background-color: var(--antcat-ice);
+  border-radius: 0 4px 4px 0;
+}
+
+/* ----- Main headings ----- */
+h1 {
+  color: var(--antcat-navy);
+  border-bottom: 2px solid var(--antcat-blue);
+  padding-bottom: 0.35em;
+  margin-bottom: 1em;
+}
+
+h2 {
+  color: var(--antcat-navy);
+  margin-top: 1.8em;
+}
+
+h3 {
+  color: var(--antcat-blue);
+}
+
+h4, h5 {
+  color: var(--antcat-muted);
+}
+
+/* ----- Links ----- */
+a {
+  color: var(--antcat-blue);
+}
+a:hover {
+  color: var(--antcat-blue-hover);
+}
+
+/* ----- CTA button (used on all pages) ----- */
+.antcat-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background-color: var(--antcat-blue);
+  color: #ffffff !important;
+  text-decoration: none !important;
+  padding: 10px 22px;
+  border-radius: 6px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  letter-spacing: 0.03em;
+  border: 2px solid var(--antcat-blue);
+  transition: background-color 0.2s ease, border-color 0.2s ease, transform 0.1s ease;
+  margin: 0.6em 0;
+}
+.antcat-btn:hover {
+  background-color: var(--antcat-blue-hover);
+  border-color: var(--antcat-blue-hover);
+  color: #ffffff !important;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(13, 43, 69, 0.2);
+}
+.antcat-btn i {
+  font-size: 1em;
+}
+
+/* ----- Integration external link buttons ----- */
+.antcat-link-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background-color: transparent;
+  color: var(--antcat-blue) !important;
+  text-decoration: none !important;
+  padding: 7px 16px;
+  border-radius: 6px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  border: 2px solid var(--antcat-blue);
+  transition: all 0.2s ease;
+  margin: 0.4em 0;
+}
+.antcat-link-btn:hover {
+  background-color: var(--antcat-blue);
+  color: #ffffff !important;
+}
+
+/* ----- Images ----- */
+.bd-article-container img:not([class*="logo"]) {
+  border-radius: 6px;
+  box-shadow: 0 2px 14px rgba(13, 43, 69, 0.10);
+  max-width: 100%;
+  margin: 0.5em auto;
+  display: block;
+}
+
+/* ----- Tables ----- */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1.2em 0;
+  font-size: 0.95em;
+  border-radius: 6px;
+  overflow: hidden;
+  box-shadow: 0 1px 6px rgba(13, 43, 69, 0.08);
+}
+thead th {
+  background-color: var(--antcat-navy);
+  color: #ffffff;
+  padding: 12px 16px;
+  text-align: left;
+  font-weight: 600;
+}
+tbody tr:nth-child(even) {
+  background-color: var(--antcat-frost);
+}
+tbody tr:hover {
+  background-color: var(--antcat-ice);
+  transition: background-color 0.15s ease;
+}
+tbody td {
+  padding: 10px 16px;
+  border-bottom: 1px solid var(--antcat-border);
+  vertical-align: top;
+}
+
+/* ----- Admonitions ----- */
+.admonition {
+  border-radius: 6px;
+  border-left-width: 4px;
+  margin: 1.4em 0;
+  padding: 0.8em 1em;
+}
+
+/* Note — glacier blue */
+div.note,
+.admonition.note {
+  background-color: var(--antcat-frost) !important;
+  border-left-color: var(--antcat-blue) !important;
+}
+div.note .admonition-title,
+.admonition.note .admonition-title {
+  background-color: var(--antcat-ice) !important;
+  color: var(--antcat-navy) !important;
+  font-weight: 600;
+}
+
+/* Seealso — navy outline */
+div.seealso,
+.admonition.seealso {
+  background-color: #f8fbfd !important;
+  border-left-color: var(--antcat-navy) !important;
+}
+div.seealso .admonition-title,
+.admonition.seealso .admonition-title {
+  background-color: var(--antcat-ice) !important;
+  color: var(--antcat-navy) !important;
+  font-weight: 600;
+}
+
+/* Tip — teal */
+div.tip,
+.admonition.tip {
+  background-color: #edfaf8 !important;
+  border-left-color: #1aaa99 !important;
+}
+div.tip .admonition-title,
+.admonition.tip .admonition-title {
+  background-color: #c4ede9 !important;
+  color: #0d4a45 !important;
+}
+
+/* ----- Code blocks ----- */
+div.highlight,
+div.highlight pre {
+  border-radius: 6px;
+}
+div.highlight {
+  border: 1px solid var(--antcat-border);
+}
+
+/* Inline code */
+code.literal,
+code {
+  background-color: var(--antcat-frost);
+  color: var(--antcat-navy);
+  padding: 1px 5px;
+  border-radius: 3px;
+  font-size: 0.88em;
+  border: 1px solid var(--antcat-border);
+}
+
+/* Don't double-style code inside code blocks */
+div.highlight code {
+  background-color: transparent;
+  border: none;
+  padding: 0;
+  font-size: inherit;
+  color: inherit;
+}
+
+/* ----- Guidance / seealso footer notes ----- */
+.guidance-note {
+  font-size: 0.9em;
+  color: var(--antcat-muted);
+  border-top: 1px solid var(--antcat-border);
+  margin-top: 2em;
+  padding-top: 0.8em;
+}
+
+/* ----- Step-by-step numbered headings (tutorial pages) ----- */
+.bd-article-container h3 {
+  background-color: var(--antcat-frost);
+  border-left: 4px solid var(--antcat-blue);
+  padding: 6px 12px;
+  border-radius: 0 4px 4px 0;
+  margin-top: 1.6em;
+  font-size: 1rem;
+  color: var(--antcat-navy);
+}
+
+/* ----- "Quick access" landing-page grid spacing ----- */
+.bd-article-container h2 + p,
+.bd-article-container h2 + table {
+  margin-top: 0.6em;
+}
+
+/* ----- Sphinx-design tab sets (R / Python tabs) ----- */
+.sd-tab-set > label {
+  font-weight: 600;
+  font-size: 0.9rem;
+  color: var(--antcat-muted);
+  border-bottom: 3px solid transparent;
+  padding: 6px 14px;
+}
+.sd-tab-set > input:checked + label {
+  color: var(--antcat-navy);
+  border-bottom-color: var(--antcat-blue);
+}
+.sd-tab-content {
+  border: 1px solid var(--antcat-border);
+  border-radius: 0 6px 6px 6px;
+  padding: 1em 1.2em;
+}
+
+/* ----- Footer ----- */
+.bd-footer {
+  border-top: 2px solid var(--antcat-border);
+  background-color: var(--antcat-frost);
+  color: var(--antcat-muted);
+  font-size: 0.85em;
+}

@@ -1,30 +1,25 @@
-# <span style="text-decoration: none;">Schema.org</span>
+# Schema.org
 
-The catalogue implements a <span style="text-decoration: none;">Schema.org</span> metadata profile for all records. <span style="text-decoration: none;">Schema.org</span> is a structured format for describing data and carries useful fields for understanding and reusing data (see fields below). <span style="text-decoration: none;">Schema.org</span> was developed by Bing, Google, and Yahoo to create a structured data format for webpages, and the catalouge has implemented it in order for Google and POLDER Federated Search to effenciently crawl its metadata records. It is also used by the Oceanum Datamesh to index metadata records.
+The catalogue implements a Schema.org metadata profile for all public records. Schema.org is a structured data format developed by Bing, Google, and Yahoo to make web content machine-readable. The catalogue uses it so that Google Dataset Search and POLDER Federated Search can efficiently crawl and index its records. It is also used by the Oceanum Datamesh.
 
-The catalogue's <span style="text-decoration: none;">Schema.org</span> profile carries the following fields:
+The following fields are carried in each record's Schema.org profile:
 
-- name (title)  
-- datePublished  
-- description (abstract)  
-- identifer (doi)  
-- keywords  
-- creator  
-- publisher  
-- distribution (DataDownload, DataLink - additional customised field "DataLink" which carries the URL to the data file)  
-- spatialCoverage  
-- temporalCoverage  
-- license  
-- citation  
+| Field | Description |
+|:------|:------------|
+| `name` | Record title |
+| `datePublished` | Publication date |
+| `description` | Abstract |
+| `identifier` | DOI |
+| `keywords` | Subject keywords |
+| `creator` | Data creator(s) |
+| `publisher` | Publishing organisation |
+| `distribution` | `DataDownload` for data files; `DataLink` (custom field) for resource links |
+| `spatialCoverage` | Geographic extent |
+| `temporalCoverage` | Temporal extent |
+| `license` | Data licence |
+| `citation` | Recommended citation |
 
-Further information about <span style="text-decoration: none;">Schema.org</span> is provided at:
-- [Science On Schema.Org (SOSO) Guidance Documents](https://github.com/ESIPFed/science-on-schema.org)  
-- [POLDER Best Practice Guide to Implementing Schema.Org for Data Discovery](https://repository.oceanbestpractices.org/bitstream/handle/11329/2301/POLDER%20schema.org%20Best%20Practice%20Guide.pdf?sequence=1).
-
-
-
-
-
-
-
-
+:::{seealso}
+- [Science On Schema.Org (SOSO) Guidance Documents](https://github.com/ESIPFed/science-on-schema.org)
+- [POLDER Best Practice Guide to Implementing Schema.Org for Data Discovery](https://repository.oceanbestpractices.org/bitstream/handle/11329/2301/POLDER%20schema.org%20Best%20Practice%20Guide.pdf?sequence=1)
+:::
