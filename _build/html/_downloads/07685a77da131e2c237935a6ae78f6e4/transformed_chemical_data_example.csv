@@ -1,0 +1,58 @@
+species,type,unit,ANZ21201--SB2-1--Sphaerotylus--3194448.1,ANZ21201--SB2-2--Sphaerotylus--3194448.2,ANZ21201--SB2-3--Sphaerotylus--3194448.3,ANZ21201--SB2-4--Sphaerotylus--3194448.4,ANZ21201--SB2-5--Sphaerotylus--3194448.5,ANZ21201--SB2-1--Laternula--3194448.6,ANZ21201--SB2-2--Laternula--3194448.7,ANZ21201--SB2-3--Laternula--3194448.8,ANZ21201--SB2-4--Laternula--3194448.9,ANZ21201--SB2-5--Laternula--3194448.1
+Arsenic,trace metals,mg/kg as rcvd,1.48,1.27,1.16,1.23,1.25,5.7,4.2,5.4,1.92,4.6
+Cadmium,trace metals,mg/kg as rcvd,7.3,5.9,3.2,3.6,6.2,6.3,7.2,6.1,1.44,6.9
+Copper,trace metals,mg/kg as rcvd,4,3.1,3.7,4.1,2.8,35,4.6,4.5,12.7,7.8
+Lead,trace metals,mg/kg as rcvd,1.28,1.66,13.6,1.48,1.38,0.65,0.36,1.47,0.88,0.37
+Mercury,trace metals,mg/kg as rcvd,0.044,0.039,0.024,0.033,0.034,0.059,0.071,0.064,0.019,0.06
+Zinc,trace metals,mg/kg as rcvd,12.2,9.8,10.2,10.2,9.1,32,22,38,17.4,35
+Acenaphthene,Polycyclic Aromatic Hydrocarbons in Biomatter,mg/kg as rcvd,< 0.0005,< 0.0005,< 0.0005,< 0.0005,< 0.0005,< 0.0015,< 0.0014,< 0.0014,< 0.0013,< 0.0014
+Acenaphthylene,Polycyclic Aromatic Hydrocarbons in Biomatter,mg/kg as rcvd,< 0.0005,< 0.0005,< 0.0005,< 0.0005,< 0.0005,< 0.0008,< 0.0007,< 0.0007,< 0.0007,< 0.0007
+Anthracene,Polycyclic Aromatic Hydrocarbons in Biomatter,mg/kg as rcvd,< 0.0002,< 0.0002,< 0.0002,< 0.0002,< 0.0002,< 0.0008,< 0.0007,< 0.0007,< 0.0007,< 0.0007
+Benzo[a]anthracene,Polycyclic Aromatic Hydrocarbons in Biomatter,mg/kg as rcvd,< 0.0002,< 0.0002,< 0.0002,< 0.0002,0.0004,< 0.0008,< 0.0007,< 0.0007,< 0.0007,< 0.0007
+Benzo[a]pyrene (BAP),Polycyclic Aromatic Hydrocarbons in Biomatter,mg/kg as rcvd,< 0.0002,< 0.0002,< 0.0002,0.0003,0.0004,< 0.0008,< 0.0007,< 0.0007,< 0.0007,< 0.0007
+Benzo[b]fluoranthene + Benzo[j]fluoranthene,Polycyclic Aromatic Hydrocarbons in Biomatter,mg/kg as rcvd,< 0.0002,< 0.0002,< 0.0002,0.0003,0.0005,< 0.0008,< 0.0007,< 0.0007,< 0.0007,< 0.0007
+"Benzo[g,h,i]perylene",Polycyclic Aromatic Hydrocarbons in Biomatter,mg/kg as rcvd,< 0.0002,< 0.0002,< 0.0002,0.0003,0.0003,< 0.0008,< 0.0007,< 0.0007,< 0.0007,< 0.0007
+Benzo[k]fluoranthene,Polycyclic Aromatic Hydrocarbons in Biomatter,mg/kg as rcvd,< 0.0002,< 0.0002,< 0.0002,< 0.0002,0.0002,< 0.0008,< 0.0007,< 0.0007,< 0.0007,< 0.0007
+Chrysene,Polycyclic Aromatic Hydrocarbons in Biomatter,mg/kg as rcvd,< 0.0002,< 0.0002,< 0.0002,< 0.0002,0.0004,< 0.0008,< 0.0007,< 0.0007,< 0.0007,< 0.0007
+"Dibenzo[a,h]anthracene",Polycyclic Aromatic Hydrocarbons in Biomatter,mg/kg as rcvd,< 0.0002,< 0.0002,< 0.0002,< 0.0002,< 0.0002,< 0.0008,< 0.0007,< 0.0007,< 0.0007,< 0.0007
+Fluoranthene,Polycyclic Aromatic Hydrocarbons in Biomatter,mg/kg as rcvd,< 0.0002,< 0.0002,< 0.0002,< 0.0002,0.0008,< 0.0008,< 0.0007,< 0.0007,< 0.0007,< 0.0007
+Fluorene,Polycyclic Aromatic Hydrocarbons in Biomatter,mg/kg as rcvd,< 0.0005,< 0.0005,< 0.0005,< 0.0005,< 0.0005,< 0.003,< 0.003,< 0.002,< 0.0019,< 0.002
+"Indeno(1,2,3-c,d)pyrene",Polycyclic Aromatic Hydrocarbons in Biomatter,mg/kg as rcvd,< 0.0002,< 0.0002,< 0.0002,0.0002,0.0003,< 0.0008,< 0.0007,< 0.0007,< 0.0007,< 0.0007
+Naphthalene,Polycyclic Aromatic Hydrocarbons in Biomatter,mg/kg as rcvd,< 0.005,< 0.005,< 0.005,< 0.005,< 0.005,< 0.018,< 0.018,< 0.017,< 0.016,< 0.017
+Phenanthrene,Polycyclic Aromatic Hydrocarbons in Biomatter,mg/kg as rcvd,< 0.0010,< 0.0010,< 0.0010,< 0.0010,< 0.0010,< 0.005,< 0.005,< 0.005,< 0.005,< 0.005
+Pyrene,Polycyclic Aromatic Hydrocarbons in Biomatter,mg/kg as rcvd,< 0.0005,< 0.0005,< 0.0005,< 0.0005,0.0008,< 0.0008,< 0.0007,< 0.0007,< 0.0007,< 0.0007
+PCB-18,Polychlorinated biphenyls in Biomatter,mg/kg,< 0.0005,< 0.0005,< 0.0005,< 0.0005,< 0.0005,< 0.0008,< 0.0007,< 0.0007,< 0.0007,< 0.0007
+PCB-28,Polychlorinated biphenyls in Biomatter,mg/kg,< 0.0005,< 0.0005,< 0.0005,< 0.0005,< 0.0005,< 0.0008,< 0.0007,< 0.0007,< 0.0007,< 0.0007
+PCB-31,Polychlorinated biphenyls in Biomatter,mg/kg,< 0.0005,< 0.0005,< 0.0005,< 0.0005,< 0.0005,< 0.0008,< 0.0007,< 0.0007,< 0.0007,< 0.0007
+PCB-44,Polychlorinated biphenyls in Biomatter,mg/kg,< 0.0005,< 0.0005,< 0.0005,< 0.0005,< 0.0005,< 0.0008,< 0.0007,< 0.0007,0.0013,< 0.0007
+PCB-49,Polychlorinated biphenyls in Biomatter,mg/kg,< 0.0005,< 0.0005,< 0.0005,< 0.0005,< 0.0005,< 0.0008,< 0.0007,< 0.0007,0.0006,< 0.0007
+PCB-52,Polychlorinated biphenyls in Biomatter,mg/kg,< 0.0005,< 0.0005,< 0.0005,< 0.0005,< 0.0005,< 0.0008,< 0.0007,0.0007,0.0044,< 0.0007
+PCB-60,Polychlorinated biphenyls in Biomatter,mg/kg,< 0.0005,< 0.0005,< 0.0005,< 0.0005,< 0.0005,< 0.0008,< 0.0007,< 0.0007,< 0.0007,< 0.0007
+PCB-77,Polychlorinated biphenyls in Biomatter,mg/kg,< 0.0005,< 0.0005,< 0.0005,< 0.0005,< 0.0005,< 0.0008,< 0.0007,< 0.0007,< 0.0007,< 0.0007
+PCB-81,Polychlorinated biphenyls in Biomatter,mg/kg,< 0.0005,< 0.0005,< 0.0005,< 0.0005,< 0.0005,< 0.0008,< 0.0007,< 0.0007,< 0.0007,< 0.0007
+PCB-86,Polychlorinated biphenyls in Biomatter,mg/kg,< 0.0005,< 0.0005,< 0.0005,< 0.0005,< 0.0005,< 0.0008,< 0.0007,< 0.0007,< 0.0007,< 0.0007
+PCB-101,Polychlorinated biphenyls in Biomatter,mg/kg,< 0.0005,< 0.0005,< 0.0005,< 0.0005,< 0.0005,< 0.0008,< 0.0007,0.0034,0.02,0.0016
+PCB-105,Polychlorinated biphenyls in Biomatter,mg/kg,< 0.0005,< 0.0005,< 0.0005,< 0.0005,< 0.0005,< 0.0008,< 0.0007,0.0018,0.0119,0.0008
+PCB-110,Polychlorinated biphenyls in Biomatter,mg/kg,< 0.0005,< 0.0005,< 0.0005,< 0.0005,< 0.0005,< 0.0008,< 0.0007,0.0028,0.0147,0.0014
+PCB-114,Polychlorinated biphenyls in Biomatter,mg/kg,< 0.0005,< 0.0005,< 0.0005,< 0.0005,< 0.0005,< 0.0008,< 0.0007,< 0.0007,0.0007,< 0.0007
+PCB-118,Polychlorinated biphenyls in Biomatter,mg/kg,0.0006,0.0005,0.0006,0.0006,0.0008,< 0.0008,< 0.0007,0.0042,0.028,0.002
+PCB-121,Polychlorinated biphenyls in Biomatter,mg/kg,< 0.0005,< 0.0005,< 0.0005,< 0.0005,< 0.0005,< 0.0008,< 0.0007,< 0.0007,< 0.0007,< 0.0007
+PCB-123,Polychlorinated biphenyls in Biomatter,mg/kg,< 0.0005,< 0.0005,< 0.0005,< 0.0005,< 0.0005,< 0.0008,< 0.0007,< 0.0007,< 0.0007,< 0.0007
+PCB-126,Polychlorinated biphenyls in Biomatter,mg/kg,< 0.0005,< 0.0005,< 0.0005,< 0.0005,< 0.0005,< 0.0008,< 0.0007,< 0.0007,< 0.0007,< 0.0007
+PCB-128,Polychlorinated biphenyls in Biomatter,mg/kg,< 0.0005,< 0.0005,< 0.0005,< 0.0005,< 0.0005,< 0.0008,< 0.0007,0.0011,0.0066,< 0.0007
+PCB-138,Polychlorinated biphenyls in Biomatter,mg/kg,0.0009,0.0011,0.0009,0.001,0.0015,< 0.0008,< 0.0007,0.0049,0.029,0.002
+PCB-141,Polychlorinated biphenyls in Biomatter,mg/kg,< 0.0005,< 0.0005,< 0.0005,< 0.0005,< 0.0005,< 0.0008,< 0.0007,< 0.0007,0.0037,< 0.0007
+PCB-149,Polychlorinated biphenyls in Biomatter,mg/kg,< 0.0005,< 0.0005,< 0.0005,< 0.0005,< 0.0005,< 0.0008,< 0.0007,0.0021,0.011,0.0009
+PCB-151,Polychlorinated biphenyls in Biomatter,mg/kg,< 0.0005,< 0.0005,< 0.0005,< 0.0005,< 0.0005,< 0.0008,< 0.0007,< 0.0007,0.0024,< 0.0007
+PCB-153,Polychlorinated biphenyls in Biomatter,mg/kg,0.0006,0.0007,0.0006,0.0007,0.001,< 0.0008,< 0.0007,0.0032,0.0174,0.0013
+PCB-156,Polychlorinated biphenyls in Biomatter,mg/kg,< 0.0005,< 0.0005,< 0.0005,< 0.0005,< 0.0005,< 0.0008,< 0.0007,0.0008,0.0041,< 0.0007
+PCB-157,Polychlorinated biphenyls in Biomatter,mg/kg,< 0.0005,< 0.0005,< 0.0005,< 0.0005,< 0.0005,< 0.0008,< 0.0007,< 0.0007,0.001,< 0.0007
+PCB-159,Polychlorinated biphenyls in Biomatter,mg/kg,< 0.0005,< 0.0005,< 0.0005,< 0.0005,< 0.0005,< 0.0008,< 0.0007,< 0.0007,< 0.0007,< 0.0007
+PCB-167,Polychlorinated biphenyls in Biomatter,mg/kg,< 0.0005,< 0.0005,< 0.0005,< 0.0005,< 0.0005,< 0.0008,< 0.0007,< 0.0007,0.0014,< 0.0007
+PCB-169,Polychlorinated biphenyls in Biomatter,mg/kg,< 0.0005,< 0.0005,< 0.0005,< 0.0005,< 0.0005,< 0.0008,< 0.0007,< 0.0007,< 0.0007,< 0.0007
+PCB-170,Polychlorinated biphenyls in Biomatter,mg/kg,< 0.0005,< 0.0005,< 0.0005,< 0.0005,< 0.0005,< 0.0008,< 0.0007,< 0.0007,0.0029,< 0.0007
+PCB-180,Polychlorinated biphenyls in Biomatter,mg/kg,< 0.0005,< 0.0005,< 0.0005,< 0.0005,< 0.0005,< 0.0008,< 0.0007,0.0009,0.0045,< 0.0007
+PCB-189,Polychlorinated biphenyls in Biomatter,mg/kg,< 0.0005,< 0.0005,< 0.0005,< 0.0005,< 0.0005,< 0.0008,< 0.0007,< 0.0007,< 0.0007,< 0.0007
+PCB-194,Polychlorinated biphenyls in Biomatter,mg/kg,< 0.0005,< 0.0005,< 0.0005,< 0.0005,< 0.0005,< 0.0008,< 0.0007,< 0.0007,< 0.0007,< 0.0007
+PCB-206,Polychlorinated biphenyls in Biomatter,mg/kg,< 0.0005,< 0.0005,< 0.0005,< 0.0005,< 0.0005,< 0.0008,< 0.0007,< 0.0007,< 0.0007,< 0.0007
+PCB-209,Polychlorinated biphenyls in Biomatter,mg/kg,< 0.0005,< 0.0005,< 0.0005,< 0.0005,< 0.0005,< 0.0008,< 0.0007,< 0.0007,< 0.0007,< 0.0007
