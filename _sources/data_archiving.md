@@ -6,7 +6,7 @@ Recommended data archival formats, parameter naming vocabularies, and data repos
 |:----------|:-------------|:--------------------|:-----------------|
 | Biodiversity | Darwin Core | [Darwin Core](https://dwc.tdwg.org/list/) | [GBIF](https://www.gbif.org/) |
 | Raw Sequence | — | — | [NCBI](https://www.ncbi.nlm.nih.gov/) |
-| Geophysical (e.g. seismic, ApRES, basal melt) | ASCII, CF-NetCDF | [CF](https://cfconventions.org/) / [NERC](https://vocab.nerc.ac.uk/)† | [Pangaea](https://www.pangaea.de/) |
+| Geophysical (e.g. seismic, ApRES, basal melt) | ASCII, CF-NetCDF, SEG-Y | [CF](https://cfconventions.org/) / [NERC](https://vocab.nerc.ac.uk/)† | [Pangaea](https://www.pangaea.de/) |
 | Atmospheric & Meteorology | CF-NetCDF | [CF](https://cfconventions.org/) / [NERC](https://vocab.nerc.ac.uk/)† | [Pangaea](https://www.pangaea.de/) |
 | Oceanographic (e.g. moorings, CTD profiles) | CF-NetCDF, ASCII | [CF](https://cfconventions.org/) / [NERC](https://vocab.nerc.ac.uk/)† | [Seanoe](https://www.seanoe.org/), [Pangaea](https://www.pangaea.de/) |
 | Ice (e.g. thickness, temperature) | CF-NetCDF, ASCII | [CF](https://cfconventions.org/) / [NERC](https://vocab.nerc.ac.uk/)† | [Pangaea](https://www.pangaea.de/) |
