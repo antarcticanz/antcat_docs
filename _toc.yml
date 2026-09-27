@@ -10,6 +10,8 @@ chapters:
   title: Connected Data Portals
 - file: fair_data
   sections:
+  - file: data_management_planning
+    title: Data Management Planning
   - file: metadata_guidance
     title: Metadata Guidance
   - file: data_formatting
