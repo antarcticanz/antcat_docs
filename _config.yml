@@ -23,6 +23,7 @@ repository:
 
 # GitHub buttons – disabled until the repository URL is confirmed
 html:
+  favicon: favicon.png
   use_issues_button: false
   use_repository_button: false
 
