@@ -1,5 +1,0 @@
-# FAIR Data
-
-Antarctic research spans decades, disciplines, and many institutions — yet the science is only as powerful as our ability to connect, compare, and build on each other's work. The [FAIR guiding principles](https://doi.org/10.1038/sdata.2016.18) — Findable, Accessible, Interoperable, and Reusable — provide a practical framework for this with data, ensuring that data are consistently structured and documented so they can be exchanged between systems, ingested by modern tools and AI-driven workflows, and reused by researchers who were never part of the original project. Consistency is the foundation: when datasets share common formats and vocabularies, they can be synthesised across field campaigns, queried programmatically, and integrated into global data products without manual intervention. Preparing FAIR data is ultimately about getting more science from the same effort — your data becomes a durable, discoverable asset that accelerates discovery long after the fieldwork ends.
-
-
