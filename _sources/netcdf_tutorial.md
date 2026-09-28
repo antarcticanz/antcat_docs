@@ -98,9 +98,9 @@ ds_notides = {
 
 ---
 
-## Step 2: Build the Master Time Grid
+## Step 2: Build the Master Time Grid (common time axis)
 
-A diagnostic check first confirms that all files share the same start time and that every gap is exactly 30 minutes. Because the check passes, timestamps are already on clean 30-minute boundaries — no floor or ceiling snapping is needed. The master time axis is then built directly from the confirmed start and end times.
+A diagnostic check first confirms that all files share the same start time and that every gap is exactly 30 minutes. Because the check passes, timestamps are already on clean 30-minute boundaries. The master time axis (common time intervals to across all data files) is then built directly from the confirmed start and end times.
 
 ::::{tab-set}
 :::{tab-item} R

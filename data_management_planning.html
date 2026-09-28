@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>Community Data Principles &#8212; Antarctic Metadata Catalogue</title>
+    <title>Data Management Planning &#8212; Antarctic Metadata Catalogue</title>
   
   
   
@@ -58,12 +58,12 @@
     <script async="async" src="_static/sphinx-thebe.js?v=c100c467"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
-    <script>DOCUMENTATION_OPTIONS.pagename = 'community_data_principles';</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'data_management_planning';</script>
     <script src="_static/lightbox.js?v=078b5772"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="Principles" href="principles.html" />
-    <link rel="prev" title="Data Archiving" href="data_archiving.html" />
+    <link rel="next" title="Metadata Guidance" href="metadata_guidance.html" />
+    <link rel="prev" title="FAIR Data" href="fair_data.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -181,8 +181,8 @@
         <ul class="current nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="getting_started.html">Getting Started</a></li>
 <li class="toctree-l1"><a class="reference internal" href="integrations.html">Connected Data Portals</a></li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="fair_data.html">FAIR Data</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="data_management_planning.html">Data Management Planning</a></li>
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="fair_data.html">FAIR Data</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">Data Management Planning</a></li>
 <li class="toctree-l2"><a class="reference internal" href="metadata_guidance.html">Metadata Guidance</a></li>
 <li class="toctree-l2 has-children"><a class="reference internal" href="data_formatting.html">Data Formatting</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
 <li class="toctree-l3"><a class="reference internal" href="ssfc_tutorial.html">Tabular Data</a></li>
@@ -193,7 +193,7 @@
 <li class="toctree-l2"><a class="reference internal" href="data_archiving.html">Data Archiving</a></li>
 </ul>
 </li>
-<li class="toctree-l1 current active has-children"><a class="current reference internal" href="#">Community Data Principles</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l1 has-children"><a class="reference internal" href="community_data_principles.html">Community Data Principles</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul>
 <li class="toctree-l2"><a class="reference internal" href="principles.html">Principles</a></li>
 </ul>
 </li>
@@ -259,7 +259,7 @@
       
       
       
-      <li><a href="_sources/community_data_principles.md" target="_blank"
+      <li><a href="_sources/data_management_planning.md" target="_blank"
    class="btn btn-sm btn-download-source-button dropdown-item"
    title="Download source file"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -343,7 +343,7 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>Community Data Principles</h1>
+    <h1>Data Management Planning</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -353,9 +353,7 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#purpose">Purpose</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#international-context">International Context</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#implementation">Implementation</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#what-we-expect-in-a-dmp">What we expect in a DMP</a></li>
 </ul>
             </nav>
         </div>
@@ -367,24 +365,32 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <section class="tex2jax_ignore mathjax_ignore" id="community-data-principles">
-<h1>Community Data Principles<a class="headerlink" href="#community-data-principles" title="Link to this heading">#</a></h1>
-<p>New Zealand’s Antarctic and Southern Ocean data collection is widely fragmented across numerous repositories and institutions. To address this, the Antarctic Science Platform in collaboration with Antarctica New Zealand has established a metadata catalogue to provide a centralised portal for discovery and access to Antarctic and Southern Ocean data collected by New Zealand-based researchers (<a class="reference external" href="https://antcat.antarcticanz.govt.nz">AntCat</a>). The catalogue is a distributed metadata management system which creates, harvests, and replicates metadata from other sources — it does not currently host data but provides direct access when a data link is available, creating a virtual data centre for seamless discovery and access across physically distributed repositories.</p>
-<p>These principles were developed in collaboration with Phase 1 Antarctic Science Platform researchers.</p>
-<section id="purpose">
-<h2>Purpose<a class="headerlink" href="#purpose" title="Link to this heading">#</a></h2>
-<p>These principles are intended to promote best practice and support the underlying design and functionality of the metadata catalogue. They cover what data providers should consider when evaluating which attributes of their data need to be formatted and described, and how these decisions influence the long-term utility of their data.</p>
-</section>
-<section id="international-context">
-<h2>International Context<a class="headerlink" href="#international-context" title="Link to this heading">#</a></h2>
-<p>The catalogue is the most comprehensive database of New Zealand-based researchers’ Antarctic and Southern Ocean data. The system is designed to disseminate metadata to NASA’s <a class="reference external" href="https://search.earthdata.nasa.gov/search?portal=amd">Antarctic Metadata Directory (AMD)</a> and other domain-specific catalogues, tools, and products including <a class="reference external" href="https://emodnet.ec.europa.eu/geonetwork">EMODnet</a> and <a class="reference external" href="http://www.soosmap.aq/">SOOSmap</a>. This approach is consistent with data centres at other polar programmes (USAP, BAS, AADC), contributing to the free and open exchange of Antarctic observations and results.</p>
-</section>
-<section id="implementation">
-<h2>Implementation<a class="headerlink" href="#implementation" title="Link to this heading">#</a></h2>
-<p>The principles are not intended to be prescriptive, and acknowledge that some Antarctic datasets have real-world constraints that can make full implementation impractical — for example, where standardised formats do not yet exist for a given data type, where data volumes are too large to store uncompressed, or where data are sensitive. Data providers who incorporate these principles into their archival workflows will ensure their data are fully integrated into the Antarctic Metadata Catalogue. At a minimum, data are best described with an internationally recognised metadata standard, enabling machine interoperability and sharing across polar data systems. Using a controlled keyword vocabulary further improves findability by enabling related records to be linked by shared characteristics such as measured parameters, instruments, and projects. Datasets should also be URL-accessible, allowing individual files to be retrieved via distinct, persistent links. Where appropriate, data should follow the <a class="reference external" href="https://cfconventions.org/Data/cf-standard-names/current/build/cf-standard-name-table.html">Climate and Forecast (CF) Conventions</a>; where this is not suitable, parameter terms can be drawn from the <a class="reference external" href="https://vocab.nerc.ac.uk/">NERC Vocabulary Server</a>. Adopting these standards maximises interoperability with data aggregators, dissemination platforms, and downstream data products.</p>
-</section>
-<div class="toctree-wrapper compound">
+  <section class="tex2jax_ignore mathjax_ignore" id="data-management-planning">
+<h1>Data Management Planning<a class="headerlink" href="#data-management-planning" title="Link to this heading">#</a></h1>
+<p>A data management plan (DMP) is a short, forward-looking document that describes how a project’s data will be collected, described, stored, shared, and preserved. Preparing one early is good research practice — it clarifies roles and responsibilities before fieldwork begins, surfaces storage and access requirements while they can still be resourced, and helps meet the expectations of funders and repositories.</p>
+<p>A DMP does more than support the production of data by identifying a project’s datasets. It also enables the production of early metadata: once the datasets, formats, spatial and temporal scope, and custodianship are known, a preliminary metadata record can be drafted and published in the catalogue well before final data are archived. This makes the work discoverable during the project rather than only at its end.</p>
+<section id="what-we-expect-in-a-dmp">
+<h2>What we expect in a DMP<a class="headerlink" href="#what-we-expect-in-a-dmp" title="Link to this heading">#</a></h2>
+<p>At minimum, a DMP should capture:</p>
+<ul class="simple">
+<li><p><strong>What</strong> — the datasets to be produced and their scientific purpose.</p></li>
+<li><p><strong>Formats</strong> — the file types and any structural or vocabulary conventions.</p></li>
+<li><p><strong>Storage and access</strong> — where the data will live during and after the project, and who can reach it.</p></li>
+<li><p><strong>How the data will be made available</strong> — the pathway to discovery and reuse, including any planned metadata publications.</p></li>
+</ul>
+<p>The following worked example shows the level of detail and scope we look for.</p>
+<div class="tip admonition">
+<p class="admonition-title">Example — project DMP summary</p>
+<p><strong>What.</strong> Data will be collected during the 2026/27 Antarctic field season and will primarily consist of two datasets. The first dataset is hyperspectral imagery (as data cubes) collected using RPAS, used to characterise target areas based on distinct spectral signatures with the help of spectrum unmixing models. The second dataset comprises individual spectral end-members, collected using handheld spectrometers.</p>
+<p><strong>Formats.</strong> The spectral end-members are stored as CSV files containing wavelength and absorbance values, with each spectrum linked to spatially representative metadata. Two primary metadata records will be maintained: one describing the hyperspectral image library, and one describing the spectral CSV files.</p>
+<p><strong>Storage and access.</strong> Data storage and access will be managed via the University of Waikato’s SharePoint infrastructure, with several terabytes of data expected.</p>
+<p><strong>How the data will be made available.</strong> Metadata records will be published through Antarctica New Zealand’s Metadata Catalogue (<a class="reference external" href="https://antcat.antarcticanz.govt.nz">https://antcat.antarcticanz.govt.nz</a>). A follow-up review of data management is planned for the end of March 2027, during which preliminary metadata will be developed and published in Antarctica New Zealand’s Metadata Catalogue.</p>
 </div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>For assistance with developing a DMP, please contact Mike Meredyth-Young (<a href="mailto:m.meredyth-young@antarcticanz.govt.nz" style="white-space: nowrap;">m.meredyth-young&#64;antarcticanz.govt.nz</a>).</p>
+</div>
+</section>
 </section>
 
     <script type="text/x-thebe-config">
@@ -418,20 +424,20 @@ document.write(`
                   
 <div class="prev-next-area">
     <a class="left-prev"
-       href="data_archiving.html"
+       href="fair_data.html"
        title="previous page">
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">Data Archiving</p>
+        <p class="prev-next-title">FAIR Data</p>
       </div>
     </a>
     <a class="right-next"
-       href="principles.html"
+       href="metadata_guidance.html"
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Principles</p>
+        <p class="prev-next-title">Metadata Guidance</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
@@ -451,9 +457,7 @@ document.write(`
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#purpose">Purpose</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#international-context">International Context</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#implementation">Implementation</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#what-we-expect-in-a-dmp">What we expect in a DMP</a></li>
 </ul>
   </nav></div>
 
